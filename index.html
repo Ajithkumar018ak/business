@@ -1,0 +1,2917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Vantage is a global corporate consulting firm delivering business strategy, financial advisory, digital transformation and sustainable growth solutions.">
+
+    <meta name="theme-color" content="#101C2C">
+
+    <title>VANTAGE | Strategy. Clarity. Growth.</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SCROLL PROGRESS
+===================================================== -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+
+
+<!-- =====================================================
+     CINEMATIC 3D PRELOADER
+===================================================== -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-background"></div>
+
+    <div class="preloader-top">
+
+        <span>VANTAGE</span>
+
+        <span>EST. 2026</span>
+
+    </div>
+
+
+    <div class="preloader-scene">
+
+        <div class="staircase-perspective">
+
+            <div class="stair stair-1"></div>
+            <div class="stair stair-2"></div>
+            <div class="stair stair-3"></div>
+            <div class="stair stair-4"></div>
+            <div class="stair stair-5"></div>
+            <div class="stair stair-6"></div>
+            <div class="stair stair-7"></div>
+            <div class="stair stair-8"></div>
+
+        </div>
+
+
+        <div class="chess-king-container" id="chessKing">
+
+            <div class="king-shadow"></div>
+
+            <div class="chess-king">
+
+                <div class="king-cross"></div>
+
+                <div class="king-crown"></div>
+
+                <div class="king-head"></div>
+
+                <div class="king-body"></div>
+
+                <div class="king-base"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="preloader-light"></div>
+
+    </div>
+
+
+    <div class="preloader-bottom">
+
+        <div class="preloader-copy">
+
+            <span class="preloader-label">
+                STRATEGY IN MOTION
+            </span>
+
+            <h2>
+                Building a better<br>
+                business perspective.
+            </h2>
+
+            <p id="preloaderStatus">
+                Preparing your experience...
+            </p>
+
+        </div>
+
+
+        <div class="preloader-progress-area">
+
+            <div class="preloader-percentage" id="preloaderPercentage">
+                00%
+            </div>
+
+            <div class="preloader-track">
+
+                <div class="preloader-fill" id="preloaderFill"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CUSTOM CURSOR
+===================================================== -->
+
+<div class="custom-cursor" id="customCursor"></div>
+
+<div class="cursor-outline" id="cursorOutline"></div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-symbol">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+
+
+            <span class="brand-information">
+
+                <strong>VANTAGE</strong>
+
+                <small>STRATEGY & CONSULTING</small>
+
+            </span>
+
+        </a>
+
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-navigation">
+
+            <a href="index.html" class="nav-link active">Home</a>
+
+            <a href="about.html" class="nav-link">About</a>
+
+            <a href="services.html" class="nav-link">Services</a>
+
+            <a href="industries.html" class="nav-link">Industries</a>
+
+            <a href="contact.html" class="nav-link">Contact</a>
+
+        </nav>
+
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button class="login-trigger" data-open-login>
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Sign In</span>
+
+            </button>
+
+
+            <a href="404.html" class="header-cta">
+
+                Let's Talk
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<aside class="mobile-drawer" id="mobileDrawer">
+
+    <div class="drawer-header">
+
+        <a href="index.html" class="drawer-brand">
+            VANTAGE
+        </a>
+
+        <button id="drawerClose" aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="drawer-content">
+
+        <span class="drawer-label">NAVIGATION / 2026</span>
+
+
+        <nav class="drawer-navigation">
+
+            <a href="index.html">
+                Home <span>01</span>
+            </a>
+
+            <a href="about.html">
+                About <span>02</span>
+            </a>
+
+            <a href="services.html">
+                Services <span>03</span>
+            </a>
+
+            <a href="industries.html">
+                Industries <span>04</span>
+            </a>
+
+            <a href="contact.html">
+                Contact <span>05</span>
+            </a>
+
+        </nav>
+
+
+        <div class="drawer-footer">
+
+            <p>Let's build something meaningful.</p>
+
+            <button data-open-login class="drawer-login">
+
+                <i class="fa-regular fa-user"></i>
+
+                Sign In
+
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+
+<!-- =====================================================
+     LOGIN MODAL
+===================================================== -->
+
+<div class="login-modal" id="loginModal" aria-hidden="true">
+
+    <div class="login-backdrop" data-close-login></div>
+
+
+    <div class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+
+
+        <button class="login-close" data-close-login aria-label="Close login">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- LOGIN VISUAL SIDE -->
+
+        <div class="login-visual">
+
+            <img
+                src="assets/images/office.jpg"
+                alt="Vantage corporate office"
+                loading="lazy"
+            >
+
+
+            <div class="login-visual-overlay"></div>
+
+
+            <div class="login-visual-content">
+
+                <span class="login-mini-label">
+                    VANTAGE / PRIVATE ACCESS
+                </span>
+
+
+                <h2>
+                    Your next<br>
+                    chapter starts<br>
+                    <span>here.</span>
+                </h2>
+
+
+                <p>
+                    A smarter workspace for modern business leaders.
+                </p>
+
+
+                <div class="login-security-badge">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure Enterprise Access
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOGIN FORM SIDE -->
+
+        <div class="login-form-panel">
+
+
+            <div class="login-form-brand">
+
+                <span class="brand-symbol">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>VANTAGE</strong>
+
+            </div>
+
+
+
+            <span class="login-eyebrow">
+                WELCOME BACK
+            </span>
+
+
+            <h2 id="loginTitle">
+                Sign in to your<br>
+                workspace.
+            </h2>
+
+
+            <p class="login-description">
+                Access your business consulting workspace securely.
+            </p>
+
+
+
+            <!-- LOGIN TABS -->
+
+            <div class="login-tabs">
+
+                <button class="login-tab active" data-login-tab="user">
+
+                    USER LOGIN
+
+                </button>
+
+
+                <button class="login-tab" data-login-tab="admin">
+
+                    ADMIN LOGIN
+
+                </button>
+
+            </div>
+
+
+
+            <!-- USER LOGIN -->
+
+            <form class="login-form active" id="userLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="userEmail">Email Address</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="userEmail"
+                            placeholder="name@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="userPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="userPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="userPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+
+            <!-- ADMIN LOGIN -->
+
+            <form class="login-form" id="adminLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="adminEmail">Administrator Email</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            placeholder="admin@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="adminPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter administrator password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="adminPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    ADMIN SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-bottom">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>256-bit encrypted session protection</span>
+
+            </div>
+
+
+            <div class="login-create">
+
+                New to Vantage?
+
+                <a href="404.html">Create an account</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<main>
+
+
+<section class="hero-section" id="homeHero">
+
+
+    <div class="hero-background">
+
+        <div class="hero-glow"></div>
+
+        <div class="hero-grid"></div>
+
+    </div>
+
+
+
+    <div class="hero-container">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="hero-left" id="heroLeft">
+
+
+            <span class="hero-eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                <span id="heroCategory">
+                    STRATEGY · TRANSFORMATION · GROWTH
+                </span>
+
+            </span>
+
+
+
+            <h1 id="heroHeading">
+
+                Navigate<br>
+
+                <span>What's Next.</span>
+
+            </h1>
+
+
+
+            <p id="heroDescription">
+
+                We help ambitious organizations navigate complexity,
+                unlock opportunities and build sustainable business growth.
+
+            </p>
+
+
+
+            <div class="hero-buttons">
+
+                <a href="404.html" class="primary-button magnetic-btn">
+
+                    Explore Our Expertise
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </a>
+
+
+                <a href="404.html" class="secondary-button">
+
+                    <span class="play-icon">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                    Discover Vantage
+
+                </a>
+
+            </div>
+
+
+
+            <div class="hero-trust">
+
+                <span class="trust-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </span>
+
+                <span>
+                    Trusted thinking. Measurable impact.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- CENTER IMAGE CAROUSEL -->
+
+        <div class="hero-center">
+
+
+            <div class="hero-image-stage" id="heroImageStage">
+
+
+                <div class="hero-image-frame active" data-slide="0">
+
+                    <img
+                        src="assets/images/hero.jpg"
+                        alt="Modern international corporate consulting office"
+                        fetchpriority="high"
+                    >
+
+                </div>
+
+
+
+                <div class="hero-image-frame" data-slide="1">
+
+                    <img
+                        src="assets/images/hero-02.jpg"
+                        alt="Business leaders discussing corporate strategy"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+
+                <div class="hero-image-frame" data-slide="2">
+
+                    <img
+                        src="assets/images/hero-03.jpg"
+                        alt="Modern business architecture and executive environment"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+
+                <div class="hero-image-overlay"></div>
+
+
+
+                <!-- IMAGE INDEX -->
+
+                <div class="hero-image-index">
+
+                    <span id="currentSlide">01</span>
+
+                    <span class="index-divider"></span>
+
+                    <span>03</span>
+
+                </div>
+
+
+
+                <!-- IMAGE CAPTION -->
+
+                <div class="hero-image-caption">
+
+                    <span>THE VANTAGE PERSPECTIVE</span>
+
+                    <h3 id="heroImageTitle">
+                        Think Beyond Today.
+                    </h3>
+
+                </div>
+
+
+
+                <!-- FLOATING STAT CARD -->
+
+                <div class="hero-floating-card">
+
+                    <span class="floating-card-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+
+                    <div>
+
+                        <small>BUSINESS PERFORMANCE</small>
+
+                        <strong id="heroStat">+32.8%</strong>
+
+                    </div>
+
+
+                    <span class="floating-growth">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CAROUSEL CONTROLS -->
+
+            <div class="hero-carousel-controls">
+
+
+                <div class="hero-dots">
+
+                    <button class="hero-dot active" data-slide-to="0" aria-label="Slide 1"></button>
+
+                    <button class="hero-dot" data-slide-to="1" aria-label="Slide 2"></button>
+
+                    <button class="hero-dot" data-slide-to="2" aria-label="Slide 3"></button>
+
+                </div>
+
+
+
+                <div class="hero-arrows">
+
+                    <button id="heroPrev" aria-label="Previous slide">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </button>
+
+
+                    <button id="heroNext" aria-label="Next slide">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- RIGHT CONTENT -->
+
+        <div class="hero-right" id="heroRight">
+
+
+            <span class="hero-right-number" id="heroNumber">
+                01 / 03
+            </span>
+
+
+
+            <div class="hero-right-content">
+
+
+                <span class="hero-right-label" id="heroRightLabel">
+                    STRATEGIC ADVISORY
+                </span>
+
+
+                <h3 id="heroRightTitle">
+
+                    Clarity in<br>
+                    Every Decision.
+
+                </h3>
+
+
+                <p id="heroRightDescription">
+
+                    Turn complex business challenges into clear,
+                    actionable strategies with expert guidance.
+
+                </p>
+
+
+                <a href="404.html" class="hero-discover">
+
+                    Discover More
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="hero-side-bottom">
+
+                <span>01</span>
+
+                <span class="side-line"></span>
+
+                <span>03</span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- HERO BOTTOM BAR -->
+
+    <div class="hero-bottom-bar">
+
+
+        <div class="hero-bottom-intro">
+
+            <span class="bottom-dot"></span>
+
+            BUILT FOR WHAT'S NEXT
+
+        </div>
+
+
+
+        <div class="hero-bottom-stat">
+
+            <strong>12+</strong>
+
+            <span>Years of Experience</span>
+
+        </div>
+
+
+
+        <div class="hero-bottom-stat">
+
+            <strong>180+</strong>
+
+            <span>Projects Delivered</span>
+
+        </div>
+
+
+
+        <div class="hero-bottom-stat">
+
+            <strong>24</strong>
+
+            <span>Markets Reached</span>
+
+        </div>
+
+
+
+        <div class="hero-bottom-stat">
+
+            <strong>96%</strong>
+
+            <span>Client Retention</span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SCROLL INDICATOR -->
+
+    <div class="hero-scroll-indicator">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <span class="scroll-indicator-line"></span>
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- =====================================================
+     SECTION 02 - COMPANY OVERVIEW
+===================================================== -->
+
+<section class="overview-section section-padding" id="overview">
+
+
+    <div class="container">
+
+
+        <div class="section-topline">
+
+            <span>01 / WHO WE ARE</span>
+
+            <span>THE VANTAGE DIFFERENCE</span>
+
+        </div>
+
+
+
+        <div class="overview-grid">
+
+
+            <div class="overview-heading reveal-left">
+
+                <span class="section-label">BEYOND CONSULTING</span>
+
+
+                <h2>
+
+                    Better thinking.<br>
+
+                    <span>Stronger business.</span>
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="overview-content reveal-right">
+
+                <p class="overview-lead">
+
+                    The future belongs to businesses that see
+                    opportunities before they become obvious.
+
+                </p>
+
+
+                <p>
+
+                    Vantage is a strategic consulting partner
+                    helping organizations make confident decisions,
+                    transform operations and create lasting value.
+
+                    We combine commercial insight, analytical
+                    thinking and practical execution to turn
+                    ambition into measurable progress.
+
+                </p>
+
+
+                <a href="about.html" class="text-link">
+
+                    Discover Our Story
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="overview-image-grid">
+
+
+            <div class="overview-main-image image-reveal">
+
+                <img
+                    src="assets/images/about.jpg"
+                    alt="Vantage corporate consulting environment"
+                    loading="lazy"
+                >
+
+                <div class="image-caption">
+
+                    <span>OUR PHILOSOPHY</span>
+
+                    <h3>Perspective creates possibility.</h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="overview-side-image image-reveal">
+
+                <img
+                    src="assets/images/team.jpg"
+                    alt="Business consulting professionals collaborating"
+                    loading="lazy"
+                >
+
+
+                <div class="overview-side-note">
+
+                    <strong>01 — 04</strong>
+
+                    <span>People. Ideas. Impact.</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     SECTION 03 - OUR EXPERTISE
+===================================================== -->
+
+<section class="expertise-section section-padding" id="expertise">
+
+
+    <div class="container">
+
+
+        <div class="expertise-header reveal-up">
+
+
+            <div>
+
+                <span class="section-label">WHAT WE DO</span>
+
+                <h2>
+                    Expertise that<br>
+                    <span>moves business forward.</span>
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                From strategic direction to operational execution,
+                we help organizations solve their most important
+                business challenges.
+
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="expertise-grid">
+
+
+            <!-- FEATURE 01 -->
+
+            <article class="expertise-card expertise-card-large reveal-up">
+
+                <div class="expertise-image">
+
+                    <img
+                        src="assets/images/services.jpg"
+                        alt="Corporate strategy consulting"
+                        loading="lazy"
+                    >
+
+                    <span class="expertise-number">01</span>
+
+                </div>
+
+
+                <div class="expertise-content">
+
+                    <span>STRATEGIC ADVISORY</span>
+
+                    <h3>Business Strategy</h3>
+
+                    <p>
+
+                        Build a clear direction, identify growth
+                        opportunities and make decisions that
+                        create long-term competitive advantage.
+
+                    </p>
+
+
+                    <a href="404.html" aria-label="Explore business strategy">
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+
+            <!-- FEATURE 02 -->
+
+            <article class="expertise-card expertise-card-dark reveal-up">
+
+                <div class="expertise-dark-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+
+                <span>FINANCIAL INTELLIGENCE</span>
+
+                <h3>Financial Advisory</h3>
+
+                <p>
+
+                    Strengthen financial performance through
+                    disciplined planning, analysis and
+                    strategic financial decisions.
+
+                </p>
+
+
+                <a href="404.html">
+
+                    Explore Advisory
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </a>
+
+
+                <div class="expertise-decoration"></div>
+
+            </article>
+
+
+
+
+            <!-- FEATURE 03 -->
+
+            <article class="expertise-card expertise-card-horizontal reveal-up">
+
+
+                <div class="expertise-horizontal-content">
+
+                    <span>TECHNOLOGY & INNOVATION</span>
+
+                    <h3>Digital Transformation</h3>
+
+                    <p>
+
+                        Modernize business operations through
+                        intelligent technology adoption and
+                        connected digital experiences.
+
+                    </p>
+
+
+                    <a href="404.html" aria-label="Explore digital transformation">
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="expertise-horizontal-image">
+
+                    <img
+                        src="assets/images/technology.jpg"
+                        alt="Digital business transformation"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+            </article>
+
+
+
+
+            <!-- FEATURE 04 -->
+
+            <article class="expertise-card expertise-card-minimal reveal-up">
+
+                <span class="expertise-minimal-number">04</span>
+
+                <span>OPERATIONAL EXCELLENCE</span>
+
+                <h3>Business Transformation</h3>
+
+                <p>
+
+                    Improve processes, strengthen organizational
+                    capabilities and build operational resilience.
+
+                </p>
+
+
+                <a href="404.html">
+
+                    Discover Solutions
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     SECTION 04 - WHY VANTAGE
+===================================================== -->
+
+<section class="why-section section-padding" id="whyVantage">
+
+
+    <div class="container">
+
+
+        <div class="why-layout">
+
+
+            <div class="why-image-area reveal-left">
+
+
+                <div class="why-image-main">
+
+                    <img
+                        src="assets/images/office.jpg"
+                        alt="Premium international corporate office"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+
+                <div class="why-floating-note">
+
+                    <span class="why-note-icon">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+
+                    <div>
+
+                        <strong>Purpose-led strategy</strong>
+
+                        <small>Focused on meaningful outcomes</small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="why-image-caption">
+
+                    <span>THINK CLEARER.</span>
+
+                    <span>MOVE FURTHER.</span>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="why-content reveal-right">
+
+
+                <span class="section-label">WHY VANTAGE</span>
+
+
+                <h2>
+
+                    Insight is valuable.<br>
+
+                    <span>Impact is everything.</span>
+
+                </h2>
+
+
+
+                <p>
+
+                    Real transformation requires more than
+                    recommendations. It requires clear thinking,
+                    collaborative execution and accountability
+                    at every stage.
+
+                </p>
+
+
+
+                <div class="why-points">
+
+
+                    <div class="why-point">
+
+                        <span>01</span>
+
+                        <div>
+
+                            <h3>Independent Perspective</h3>
+
+                            <p>Objective thinking grounded in business realities.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="why-point">
+
+                        <span>02</span>
+
+                        <div>
+
+                            <h3>Outcome-Driven Approach</h3>
+
+                            <p>Every strategy is connected to measurable objectives.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="why-point">
+
+                        <span>03</span>
+
+                        <div>
+
+                            <h3>Collaborative Partnership</h3>
+
+                            <p>We work alongside your team, not just around it.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="why-point">
+
+                        <span>04</span>
+
+                        <div>
+
+                            <h3>Long-Term Thinking</h3>
+
+                            <p>Building capabilities that continue creating value.</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <a href="about.html" class="dark-button">
+
+                    Why Work With Us
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<!-- =====================================================
+     VISUAL SHOWCASE — IMAGE CAROUSEL
+====================================================== -->
+
+<section class="showcase-section section-padding" id="showcase">
+
+    <div class="container">
+
+        <div class="showcase-header reveal-up">
+
+            <div>
+                <span class="section-label">OUR WORLD IN PERSPECTIVE</span>
+
+                <h2>
+                    Ideas that move.
+                    <span>Experiences that matter.</span>
+                </h2>
+            </div>
+
+            <div class="showcase-description">
+                <p>
+                    Explore the environments, collaborations and
+                    strategic moments that shape the way we think,
+                    work and create meaningful business outcomes.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="showcase-carousel">
+
+            <div class="showcase-track" id="showcaseTrack">
+
+                <!-- Slide 01 -->
+
+                <article class="showcase-slide">
+
+                    <div class="showcase-image">
+
+                        <img
+                            src="assets/images/showcase-01.jpg"
+                            alt="Modern corporate workspace"
+                        >
+
+                        <span class="showcase-image-number">01 / 05</span>
+
+                        <div class="showcase-image-overlay">
+
+                            <span>STRATEGIC THINKING</span>
+
+                            <h3>Clarity creates opportunity.</h3>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Slide 02 -->
+
+                <article class="showcase-slide">
+
+                    <div class="showcase-image">
+
+                        <img
+                            src="assets/images/showcase-02.jpg"
+                            alt="Business leadership meeting"
+                        >
+
+                        <span class="showcase-image-number">02 / 05</span>
+
+                        <div class="showcase-image-overlay">
+
+                            <span>LEADERSHIP & GROWTH</span>
+
+                            <h3>Leadership shapes tomorrow.</h3>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Slide 03 -->
+
+                <article class="showcase-slide">
+
+                    <div class="showcase-image">
+
+                        <img
+                            src="assets/images/showcase-03.jpg"
+                            alt="Digital business innovation"
+
+                        >
+
+                        <span class="showcase-image-number">03 / 05</span>
+
+                        <div class="showcase-image-overlay">
+
+                            <span>DIGITAL INNOVATION</span>
+
+                            <h3>Innovation without limits.</h3>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Slide 04 -->
+
+                <article class="showcase-slide">
+
+                    <div class="showcase-image">
+
+                        <img
+                            src="assets/images/showcase-04.jpg"
+                            alt="Collaborative strategy session"
+                        >
+
+                        <span class="showcase-image-number">04 / 05</span>
+
+                        <div class="showcase-image-overlay">
+
+                            <span>COLLABORATION</span>
+
+                            <h3>Better ideas begin together.</h3>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Slide 05 -->
+
+                <article class="showcase-slide">
+
+                    <div class="showcase-image">
+
+                        <img
+                            src="assets/images/showcase-05.jpg"
+                            alt="Modern business architecture"
+                        >
+
+                        <span class="showcase-image-number">05 / 05</span>
+
+                        <div class="showcase-image-overlay">
+
+                            <span>FUTURE PERSPECTIVE</span>
+
+                            <h3>Building what comes next.</h3>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- Carousel Controls -->
+
+            <div class="showcase-controls">
+
+                <div class="showcase-counter">
+                    <span id="showcaseCurrent">01</span>
+                    <span class="showcase-counter-line"></span>
+                    <span>05</span>
+                </div>
+
+                <div class="showcase-arrows">
+
+                    <button
+                        type="button"
+                        id="showcasePrev"
+                        aria-label="Previous image"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <button
+                        type="button"
+                        id="showcaseNext"
+                        aria-label="Next image"
+                    >
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CLIENT TESTIMONIALS
+====================================================== -->
+
+<section class="testimonials-section section-padding" id="testimonials">
+
+    <div class="container">
+
+        <div class="testimonials-header reveal-up">
+
+            <div>
+
+                <span class="section-label">
+                    VOICES OF TRUST
+                </span>
+
+                <h2>
+                    Relationships built
+                    <span>on results.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Meaningful partnerships are built on trust,
+                shared ambition and the confidence to move forward.
+            </p>
+
+        </div>
+
+
+        <div class="testimonial-feature">
+
+            <div class="testimonial-feature-left">
+
+                <span class="testimonial-quote-icon">
+                    <i class="fa-solid fa-quote-left"></i>
+                </span>
+
+                <span class="testimonial-overline">
+                    CLIENT PERSPECTIVES
+                </span>
+
+                <h3>
+                    Real partnerships.
+                    Meaningful progress.
+                </h3>
+
+                <p>
+                    We believe the strongest measure of our work
+                    is the confidence our clients place in us.
+                    Every collaboration is an opportunity to
+                    create lasting value.
+                </p>
+
+                <div class="testimonial-rating">
+
+                    <div class="rating-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <span>Committed to meaningful outcomes</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial-slider">
+
+                <div class="testimonial-track" id="testimonialTrack">
+
+
+                    <!-- Testimonial 01 -->
+
+                    <article class="testimonial-card active">
+
+                        <div class="testimonial-card-top">
+
+                            <span class="testimonial-card-label">
+                                BUSINESS TRANSFORMATION
+                            </span>
+
+                            <span class="testimonial-card-number">
+                                01 / 03
+                            </span>
+
+                        </div>
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The team brought a refreshing perspective
+                            to our business challenges. Their structured
+                            thinking and collaborative approach helped
+                            us see opportunities more clearly."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+
+                            <div class="testimonial-avatar">
+                                <img
+                                    src="assets/images/client-01.jpg"
+                                    alt="Client portrait"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Michael Anderson</h4>
+                                <span>Managing Director</span>
+                            </div>
+
+                            <span class="testimonial-author-mark">
+                                V.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Testimonial 02 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-card-top">
+
+                            <span class="testimonial-card-label">
+                                STRATEGIC CONSULTING
+                            </span>
+
+                            <span class="testimonial-card-number">
+                                02 / 03
+                            </span>
+
+                        </div>
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "What stood out was their ability to
+                            understand our goals and translate complex
+                            ideas into a clear strategic direction.
+                            The collaboration was thoughtful and focused."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+
+                            <div class="testimonial-avatar">
+                                <img
+                                    src="assets/images/client-02.jpg"
+                                    alt="Client portrait"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Sarah Williams</h4>
+                                <span>Business Director</span>
+                            </div>
+
+                            <span class="testimonial-author-mark">
+                                V.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Testimonial 03 -->
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-card-top">
+
+                            <span class="testimonial-card-label">
+                                DIGITAL INNOVATION
+                            </span>
+
+                            <span class="testimonial-card-number">
+                                03 / 03
+                            </span>
+
+                        </div>
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "A professional and insightful team
+                            that understands the importance of
+                            long-term thinking. Their approach
+                            helped us build greater confidence
+                            in our next steps."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+
+                            <div class="testimonial-avatar">
+                                <img
+                                    src="assets/images/client-03.jpg"
+                                    alt="Client portrait"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>David Thompson</h4>
+                                <span>Founder & CEO</span>
+                            </div>
+
+                            <span class="testimonial-author-mark">
+                                V.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="testimonial-controls">
+
+                    <div class="testimonial-dots" id="testimonialDots">
+
+                        <button class="testimonial-dot active"
+                            type="button"
+                            aria-label="Testimonial 1">
+                        </button>
+
+                        <button class="testimonial-dot"
+                            type="button"
+                            aria-label="Testimonial 2">
+                        </button>
+
+                        <button class="testimonial-dot"
+                            type="button"
+                            aria-label="Testimonial 3">
+                        </button>
+
+                    </div>
+
+
+                    <div class="testimonial-arrows">
+
+                        <button
+                            type="button"
+                            id="testimonialPrev"
+                            aria-label="Previous testimonial"
+                        >
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <button
+                            type="button"
+                            id="testimonialNext"
+                            aria-label="Next testimonial"
+                        >
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 05 - INDUSTRIES
+===================================================== -->
+
+<section class="industries-section section-padding" id="industries">
+
+
+    <div class="container">
+
+
+        <div class="industries-header reveal-up">
+
+
+            <div>
+
+                <span class="section-label">OUR INDUSTRIES</span>
+
+                <h2>
+
+                    Different industries.<br>
+
+                    <span>One strategic perspective.</span>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Deep business understanding across the sectors
+                shaping tomorrow's economy.
+
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="industries-grid">
+
+
+            <a href="404.html" class="industry-item reveal-up">
+
+                <span class="industry-icon">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                </span>
+
+
+                <span class="industry-number">01</span>
+
+                <h3>Financial Services</h3>
+
+                <p>Building resilient financial operations and sustainable growth.</p>
+
+                <span class="industry-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+
+            <a href="404.html" class="industry-item reveal-up">
+
+                <span class="industry-icon">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                </span>
+
+
+                <span class="industry-number">02</span>
+
+                <h3>Technology & IT</h3>
+
+                <p>Accelerating innovation and digital business transformation.</p>
+
+                <span class="industry-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+
+            <a href="404.html" class="industry-item reveal-up">
+
+                <span class="industry-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </span>
+
+
+                <span class="industry-number">03</span>
+
+                <h3>Healthcare</h3>
+
+                <p>Strengthening systems, efficiency and service delivery.</p>
+
+                <span class="industry-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+
+            <a href="404.html" class="industry-item reveal-up">
+
+                <span class="industry-icon">
+
+                    <i class="fa-solid fa-industry"></i>
+
+                </span>
+
+
+                <span class="industry-number">04</span>
+
+                <h3>Manufacturing</h3>
+
+                <p>Creating smarter processes and operational excellence.</p>
+
+                <span class="industry-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+
+            <a href="404.html" class="industry-item reveal-up">
+
+                <span class="industry-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </span>
+
+
+                <span class="industry-number">05</span>
+
+                <h3>Retail & Commerce</h3>
+
+                <p>Improving customer experience and commercial performance.</p>
+
+                <span class="industry-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </span>
+
+            </a>
+
+
+
+
+            <a href="404.html" class="industry-item reveal-up">
+
+                <span class="industry-icon">
+
+                    <i class="fa-solid fa-earth-americas"></i>
+
+                </span>
+
+
+                <span class="industry-number">06</span>
+
+                <h3>Enterprise & Global</h3>
+
+                <p>Supporting complex organizations through strategic change.</p>
+
+                <span class="industry-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     SECTION 06 - OUR APPROACH
+===================================================== -->
+
+<section class="approach-section section-padding" id="approach">
+
+
+    <div class="container">
+
+
+        <div class="approach-heading reveal-up">
+
+            <span class="section-label">HOW WE WORK</span>
+
+
+            <h2>
+
+                From complex challenges<br>
+
+                <span>to confident action.</span>
+
+            </h2>
+
+
+            <p>
+
+                A disciplined, collaborative process that turns
+                strategic thinking into meaningful business results.
+
+            </p>
+
+        </div>
+
+
+
+
+        <div class="approach-layout">
+
+
+            <div class="approach-image reveal-left">
+
+                <img
+                    src="assets/images/meeting.jpg"
+                    alt="Consulting team working on a business strategy"
+                    loading="lazy"
+                >
+
+
+                <div class="approach-image-label">
+
+                    <span>THE VANTAGE METHOD</span>
+
+                    <strong>Clarity through every stage.</strong>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="approach-steps">
+
+
+                <div class="approach-step reveal-right">
+
+                    <span class="approach-step-number">01</span>
+
+                    <div>
+
+                        <span>DISCOVER</span>
+
+                        <h3>Understand the Challenge</h3>
+
+                        <p>
+
+                            We listen, investigate and identify
+                            the business realities behind the challenge.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="approach-step reveal-right">
+
+                    <span class="approach-step-number">02</span>
+
+                    <div>
+
+                        <span>ANALYZE</span>
+
+                        <h3>Find the Opportunity</h3>
+
+                        <p>
+
+                            We examine data, identify gaps and
+                            uncover opportunities for improvement.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="approach-step reveal-right">
+
+                    <span class="approach-step-number">03</span>
+
+                    <div>
+
+                        <span>STRATEGIZE</span>
+
+                        <h3>Define the Direction</h3>
+
+                        <p>
+
+                            We develop practical strategies
+                            aligned with your organizational goals.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="approach-step reveal-right">
+
+                    <span class="approach-step-number">04</span>
+
+                    <div>
+
+                        <span>EXECUTE</span>
+
+                        <h3>Deliver Lasting Impact</h3>
+
+                        <p>
+
+                            We support implementation, measure
+                            progress and continuously optimize.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     SECTION 07 - BUSINESS INSIGHTS
+===================================================== -->
+
+<section class="insights-section section-padding" id="insights">
+
+
+    <div class="container">
+
+
+        <div class="insights-header reveal-up">
+
+
+            <div>
+
+                <span class="section-label">BUSINESS INSIGHTS</span>
+
+                <h2>
+
+                    Progress you can<br>
+
+                    <span>measure and build on.</span>
+
+                </h2>
+
+            </div>
+
+
+            <a href="404.html" class="insights-link">
+
+                Explore Insights
+
+                <i class="fa-solid fa-arrow-up-right"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+
+        <div class="insights-grid">
+
+
+            <div class="insight-stat-card reveal-up">
+
+                <span>STRATEGIC EXPERIENCE</span>
+
+                <strong class="counter" data-target="12">0</strong>
+
+                <span class="stat-suffix">+</span>
+
+                <p>Years of helping organizations move forward.</p>
+
+                <div class="stat-decoration">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight-stat-card insight-stat-blue reveal-up">
+
+                <span>DELIVERED PROJECTS</span>
+
+                <strong class="counter" data-target="180">0</strong>
+
+                <span class="stat-suffix">+</span>
+
+                <p>Business challenges transformed into opportunities.</p>
+
+                <div class="stat-decoration">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight-stat-card reveal-up">
+
+                <span>CLIENT RETENTION</span>
+
+                <strong class="counter" data-target="96">0</strong>
+
+                <span class="stat-suffix">%</span>
+
+                <p>Built on trust, collaboration and measurable value.</p>
+
+                <div class="stat-decoration">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="insights-bottom">
+
+
+            <div class="insights-bottom-image image-reveal">
+
+                <img
+                    src="assets/images/analytics.jpg"
+                    alt="Business performance analysis"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+
+            <div class="insights-bottom-content reveal-right">
+
+                <span>THE VALUE OF PERSPECTIVE</span>
+
+                <h3>
+                    Make informed decisions.
+                    Create meaningful progress.
+                </h3>
+
+                <p>
+
+                    We believe business performance improves
+                    when insight, execution and accountability
+                    work together.
+
+                </p>
+
+
+                <a href="404.html" class="text-link">
+
+                    Explore Our Thinking
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     SECTION 08 - FINAL CTA
+===================================================== -->
+
+<section class="cta-section" id="contactCTA">
+
+
+    <div class="cta-background">
+
+        <img
+            src="assets/images/cta-office.jpg"
+            alt="Modern corporate architecture"
+            loading="lazy"
+        >
+
+        <div class="cta-overlay"></div>
+
+    </div>
+
+
+
+    <div class="cta-content reveal-up">
+
+
+        <span class="section-label">
+            YOUR NEXT MOVE STARTS HERE
+        </span>
+
+
+
+        <h2>
+
+            Think bigger.<br>
+
+            <span>Move forward.</span>
+
+        </h2>
+
+
+
+        <p>
+
+            Every great business transformation starts
+            with a meaningful conversation.
+
+        </p>
+
+
+
+        <a href="contact.html" class="cta-button">
+
+            Start a Conversation
+
+            <i class="fa-solid fa-arrow-up-right"></i>
+
+        </a>
+
+
+
+        <span class="cta-bottom-note">
+
+            STRATEGY · CLARITY · SUSTAINABLE GROWTH
+
+        </span>
+
+
+    </div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+<footer class="site-footer" id="footer">
+
+    <!-- 3D BACKGROUND ELEMENTS -->
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+
+    <div class="footer-light footer-light-one" aria-hidden="true"></div>
+    <div class="footer-light footer-light-two" aria-hidden="true"></div>
+
+    <div class="footer-3d-scene" aria-hidden="true">
+
+        <div class="footer-orb footer-orb-one"></div>
+        <div class="footer-orb footer-orb-two"></div>
+        <div class="footer-orb footer-orb-three"></div>
+
+        <div class="footer-ring"></div>
+        <div class="footer-cube"></div>
+        <div class="footer-cross"></div>
+
+    </div>
+
+
+    <!-- FOOTER TOP -->
+    <div class="footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-symbol">V.</span>
+
+                <span class="footer-logo-text">
+                    VANTAGE
+                    <small>STRATEGY & CONSULTING</small>
+                </span>
+            </a>
+
+            <p>
+                Strategic thinking,<br>
+                meaningful partnerships and<br>
+                transformative business solutions<br>
+                for a world in motion.
+            </p>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-socials">
+
+                <a href="404.html" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="404.html" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="404.html" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="404.html" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                EXPLORE
+            </span>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Expertise</a>
+            <a href="work.html">Our Work</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                OUR EXPERTISE
+            </span>
+
+            <a href="services.html">Business Strategy</a>
+            <a href="services.html">Digital Transformation</a>
+            <a href="services.html">Growth Consulting</a>
+            <a href="services.html">Technology Advisory</a>
+            <a href="services.html">Market Intelligence</a>
+
+        </div>
+
+
+        <!-- STUDIO CONTACT -->
+        <div class="footer-column footer-contact">
+
+            <span class="footer-heading">
+                GET IN TOUCH
+            </span>
+
+
+            <!-- LOCATION -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        OUR LOCATION
+                    </span>
+
+                    <a href="404.html">
+                        Chennai,<br>
+                        Tamil Nadu,<br>
+                        India
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        EMAIL US
+                    </span>
+
+                    <a href="mailto:hello@vantageconsulting.com">
+                        hello@vantageconsulting.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSINESS ENQUIRIES -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        BUSINESS ENQUIRIES
+                    </span>
+
+                    <a href="contact.html">
+                        Let's discuss your next<br>
+                        strategic opportunity.
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBSCRIBE -->
+            <div class="footer-subscribe">
+
+                <div class="subscribe-input">
+
+                    <input
+                        type="email"
+                        id="footerEmail"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    class="subscribe-button"
+                    onclick="window.location.href='404.html'"
+                >
+
+                    STAY CONNECTED
+
+                    <span>↗</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+    
+
+</footer>
+
+
+
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+
+
+<script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1857 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services | VANTAGE Strategy & Consulting</title>
+
+    <meta name="description"
+        content="Explore VANTAGE strategy, consulting, digital transformation and business growth services. We turn complex challenges into meaningful progress.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main website styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Services page styles -->
+    <link rel="stylesheet" href="css/services.css">
+
+    <!-- Animation styles -->
+    <link rel="stylesheet" href="css/animation.css">
+
+
+
+      <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     SCROLL PROGRESS
+===================================================== -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+
+
+<!-- =====================================================
+     CINEMATIC 3D PRELOADER
+===================================================== -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-background"></div>
+
+    <div class="preloader-top">
+
+        <span>VANTAGE</span>
+
+        <span>EST. 2026</span>
+
+    </div>
+
+
+    <div class="preloader-scene">
+
+        <div class="staircase-perspective">
+
+            <div class="stair stair-1"></div>
+            <div class="stair stair-2"></div>
+            <div class="stair stair-3"></div>
+            <div class="stair stair-4"></div>
+            <div class="stair stair-5"></div>
+            <div class="stair stair-6"></div>
+            <div class="stair stair-7"></div>
+            <div class="stair stair-8"></div>
+
+        </div>
+
+
+        <div class="chess-king-container" id="chessKing">
+
+            <div class="king-shadow"></div>
+
+            <div class="chess-king">
+
+                <div class="king-cross"></div>
+
+                <div class="king-crown"></div>
+
+                <div class="king-head"></div>
+
+                <div class="king-body"></div>
+
+                <div class="king-base"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="preloader-light"></div>
+
+    </div>
+
+
+    <div class="preloader-bottom">
+
+        <div class="preloader-copy">
+
+            <span class="preloader-label">
+                STRATEGY IN MOTION
+            </span>
+
+            <h2>
+                Building a better<br>
+                business perspective.
+            </h2>
+
+            <p id="preloaderStatus">
+                Preparing your experience...
+            </p>
+
+        </div>
+
+
+        <div class="preloader-progress-area">
+
+            <div class="preloader-percentage" id="preloaderPercentage">
+                00%
+            </div>
+
+            <div class="preloader-track">
+
+                <div class="preloader-fill" id="preloaderFill"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CUSTOM CURSOR
+===================================================== -->
+
+<div class="custom-cursor" id="customCursor"></div>
+
+<div class="cursor-outline" id="cursorOutline"></div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-symbol">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+
+
+            <span class="brand-information">
+
+                <strong>VANTAGE</strong>
+
+                <small>STRATEGY & CONSULTING</small>
+
+            </span>
+
+        </a>
+
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-navigation">
+
+            <a href="index.html" class="nav-link ">Home</a>
+
+            <a href="about.html" class="nav-link">About</a>
+
+            <a href="services.html" class="nav-link active">Services</a>
+
+            <a href="industries.html" class="nav-link">Industries</a>
+
+            <a href="contact.html" class="nav-link">Contact</a>
+
+        </nav>
+
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button class="login-trigger" data-open-login>
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Sign In</span>
+
+            </button>
+
+
+            <a href="404.html" class="header-cta">
+
+                Let's Talk
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<aside class="mobile-drawer" id="mobileDrawer">
+
+    <div class="drawer-header">
+
+        <a href="index.html" class="drawer-brand">
+            VANTAGE
+        </a>
+
+        <button id="drawerClose" aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="drawer-content">
+
+        <span class="drawer-label">NAVIGATION / 2026</span>
+
+
+        <nav class="drawer-navigation">
+
+            <a href="index.html">
+                Home <span>01</span>
+            </a>
+
+            <a href="about.html">
+                About <span>02</span>
+            </a>
+
+            <a href="services.html">
+                Services <span>03</span>
+            </a>
+
+            <a href="industries.html">
+                Industries <span>04</span>
+            </a>
+
+            <a href="contact.html">
+                Contact <span>05</span>
+            </a>
+
+        </nav>
+
+
+        <div class="drawer-footer">
+
+            <p>Let's build something meaningful.</p>
+
+            <button data-open-login class="drawer-login">
+
+                <i class="fa-regular fa-user"></i>
+
+                Sign In
+
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+
+<!-- =====================================================
+     LOGIN MODAL
+===================================================== -->
+
+<div class="login-modal" id="loginModal" aria-hidden="true">
+
+    <div class="login-backdrop" data-close-login></div>
+
+
+    <div class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+
+
+        <button class="login-close" data-close-login aria-label="Close login">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- LOGIN VISUAL SIDE -->
+
+        <div class="login-visual">
+
+            <img
+                src="assets/images/office.jpg"
+                alt="Vantage corporate office"
+                loading="lazy"
+            >
+
+
+            <div class="login-visual-overlay"></div>
+
+
+            <div class="login-visual-content">
+
+                <span class="login-mini-label">
+                    VANTAGE / PRIVATE ACCESS
+                </span>
+
+
+                <h2>
+                    Your next<br>
+                    chapter starts<br>
+                    <span>here.</span>
+                </h2>
+
+
+                <p>
+                    A smarter workspace for modern business leaders.
+                </p>
+
+
+                <div class="login-security-badge">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure Enterprise Access
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOGIN FORM SIDE -->
+
+        <div class="login-form-panel">
+
+
+            <div class="login-form-brand">
+
+                <span class="brand-symbol">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>VANTAGE</strong>
+
+            </div>
+
+
+
+            <span class="login-eyebrow">
+                WELCOME BACK
+            </span>
+
+
+            <h2 id="loginTitle">
+                Sign in to your<br>
+                workspace.
+            </h2>
+
+
+            <p class="login-description">
+                Access your business consulting workspace securely.
+            </p>
+
+
+
+            <!-- LOGIN TABS -->
+
+            <div class="login-tabs">
+
+                <button class="login-tab active" data-login-tab="user">
+
+                    USER LOGIN
+
+                </button>
+
+
+                <button class="login-tab" data-login-tab="admin">
+
+                    ADMIN LOGIN
+
+                </button>
+
+            </div>
+
+
+
+            <!-- USER LOGIN -->
+
+            <form class="login-form active" id="userLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="userEmail">Email Address</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="userEmail"
+                            placeholder="name@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="userPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="userPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="userPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+
+            <!-- ADMIN LOGIN -->
+
+            <form class="login-form" id="adminLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="adminEmail">Administrator Email</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            placeholder="admin@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="adminPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter administrator password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="adminPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    ADMIN SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-bottom">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>256-bit encrypted session protection</span>
+
+            </div>
+
+
+            <div class="login-create">
+
+                New to Vantage?
+
+                <a href="404.html">Create an account</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <main>
+
+
+        <!-- =====================================================
+             SECTION 01 — SERVICES HERO
+        ====================================================== -->
+
+        <section class="services-hero" id="servicesHero">
+
+            <div class="services-hero-background"></div>
+
+            <div class="services-hero-container">
+
+                <div class="services-hero-content">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        WHAT WE DO
+                        <span class="eyebrow-line"></span>
+                        01 — 07
+                    </div>
+
+
+                    <h1>
+                        Expertise that
+                        <span>moves business</span>
+                        forward.
+                    </h1>
+
+
+                    <p class="services-hero-description">
+                        We combine strategic thinking, digital innovation
+                        and practical execution to help ambitious businesses
+                        solve complex challenges and create lasting value.
+                    </p>
+
+
+                    <div class="services-hero-actions">
+
+                        <a href="#serviceOverview" class="primary-button">
+                            Explore Our Services
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+
+                        <a href="contact.html" class="text-button">
+                            Discuss Your Project
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="services-hero-meta">
+
+                        <div>
+                            <strong>01</strong>
+                            <span>Strategic thinking</span>
+                        </div>
+
+                        <div>
+                            <strong>02</strong>
+                            <span>Digital excellence</span>
+                        </div>
+
+                        <div>
+                            <strong>03</strong>
+                            <span>Measurable growth</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="services-hero-visual">
+
+                    <div class="services-visual-label">
+                        <span>OUR EXPERTISE</span>
+                        <span>EST. 2026</span>
+                    </div>
+
+
+                    <div class="services-visual-main">
+
+                        <img src="assets/images/services-hero.jpg"
+                            alt="VANTAGE strategic business consulting team">
+
+                        <div class="services-visual-overlay">
+
+                            <span>THE VANTAGE APPROACH</span>
+
+                            <h3>
+                                Think clearly.
+                                <br>
+                                Act decisively.
+                            </h3>
+
+                            <div class="visual-bottom-line">
+                                <span>STRATEGY / INNOVATION / GROWTH</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="services-floating-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+                            <strong>Beyond advice.</strong>
+                            <span>Into meaningful action.</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="services-visual-index">
+                        <span>V.</span>
+                        <span>01 / 04</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="services-hero-bottom">
+
+                <span>STRATEGY THAT CREATES DIRECTION</span>
+
+                <span>SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down"></i></span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION 02 — SERVICES OVERVIEW
+        ====================================================== -->
+
+        <section class="service-overview" id="serviceOverview">
+
+            <div class="service-overview-container">
+
+
+                <div class="service-overview-heading">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        OUR EXPERTISE
+                        <span class="eyebrow-line"></span>
+                        02 — 07
+                    </div>
+
+
+                    <div class="overview-heading-grid">
+
+                        <h2>
+                            Everything you need
+                            <span>to move ahead.</span>
+                        </h2>
+
+                        <p>
+                            Great businesses need more than good ideas.
+                            They need clear direction, the right capabilities
+                            and a partner who understands how to turn
+                            ambition into action.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-overview-grid">
+
+
+                    <article class="overview-service-card">
+
+                        <div class="overview-card-top">
+                            <span>01 / STRATEGY</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <div class="overview-card-icon">
+                            <i class="fa-solid fa-chess"></i>
+                        </div>
+
+                        <h3>Strategy & Consulting</h3>
+
+                        <p>
+                            Build a stronger business foundation with
+                            informed decisions, structured planning
+                            and long-term strategic direction.
+                        </p>
+
+                        <a href="#strategyService">
+                            Explore service
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="overview-service-card featured">
+
+                        <div class="overview-card-top">
+                            <span>02 / DIGITAL</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <div class="overview-card-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <h3>Digital Transformation</h3>
+
+                        <p>
+                            Modernise operations, embrace technology
+                            and create connected digital experiences
+                            that work for your business.
+                        </p>
+
+                        <a href="#digitalService">
+                            Explore service
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="overview-service-card">
+
+                        <div class="overview-card-top">
+                            <span>03 / GROWTH</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <div class="overview-card-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+
+                        <h3>Growth & Performance</h3>
+
+                        <p>
+                            Identify new opportunities, strengthen
+                            performance and build a business ready
+                            for its next stage of growth.
+                        </p>
+
+                        <a href="#growthService">
+                            Explore service
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="overview-bottom-note">
+
+                    <span>ONE PARTNER. MULTIPLE POSSIBILITIES.</span>
+
+                    <p>
+                        Our capabilities work together to create a
+                        complete and connected business transformation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION 03 — STRATEGY & CONSULTING
+        ====================================================== -->
+
+        <section class="strategy-service" id="strategyService">
+
+            <div class="strategy-service-container">
+
+
+                <div class="strategy-service-visual">
+
+                    <div class="strategy-image-main">
+
+                        <img src="assets/images/service-strategy.jpg"
+                            alt="Business leaders discussing strategic planning">
+
+                    </div>
+
+
+                    <div class="strategy-image-small">
+
+                        <img src="assets/images/service-strategy-detail.jpg"
+                            alt="Business strategy and planning documents">
+
+                    </div>
+
+
+                    <div class="strategy-image-caption">
+
+                        <span>STRATEGY IN MOTION</span>
+
+                        <strong>Clarity creates confidence.</strong>
+
+                    </div>
+
+
+                    <div class="strategy-side-number">
+                        01
+                    </div>
+
+                </div>
+
+
+
+                <div class="strategy-service-content">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        STRATEGY & CONSULTING
+                        <span class="eyebrow-line"></span>
+                        03 — 07
+                    </div>
+
+
+                    <h2>
+                        Turn complexity
+                        <span>into clarity.</span>
+                    </h2>
+
+
+                    <p class="strategy-intro">
+                        Every successful transformation starts with
+                        a clear understanding of where you are and
+                        where you want to go. We help you define
+                        the path between the two.
+                    </p>
+
+
+                    <div class="strategy-feature-list">
+
+
+                        <div class="strategy-feature">
+
+                            <span class="feature-number">01</span>
+
+                            <div>
+                                <h4>Business Strategy</h4>
+                                <p>
+                                    Define priorities, identify opportunities
+                                    and establish a practical roadmap
+                                    for sustainable success.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+
+                        <div class="strategy-feature">
+
+                            <span class="feature-number">02</span>
+
+                            <div>
+                                <h4>Market Research & Insights</h4>
+                                <p>
+                                    Understand market dynamics, customer
+                                    expectations and competitive positioning
+                                    before making critical decisions.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+
+                        <div class="strategy-feature">
+
+                            <span class="feature-number">03</span>
+
+                            <div>
+                                <h4>Operational Excellence</h4>
+                                <p>
+                                    Improve processes, strengthen workflows
+                                    and build efficient operating models.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+
+                        <div class="strategy-feature">
+
+                            <span class="feature-number">04</span>
+
+                            <div>
+                                <h4>Business Advisory</h4>
+                                <p>
+                                    Make confident business decisions
+                                    with structured insights and
+                                    experienced strategic guidance.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a href="contact.html" class="service-link-button">
+                        Discuss Your Strategy
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION 04 — DIGITAL TRANSFORMATION
+        ====================================================== -->
+
+        <section class="digital-service" id="digitalService">
+
+            <div class="digital-service-container">
+
+
+                <div class="digital-service-heading">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        DIGITAL TRANSFORMATION
+                        <span class="eyebrow-line"></span>
+                        04 — 07
+                    </div>
+
+
+                    <h2>
+                        Build for what's
+                        <span>next.</span>
+                    </h2>
+
+
+                    <p>
+                        Technology should make business simpler,
+                        smarter and more connected. We help
+                        organisations embrace digital possibilities
+                        with purpose and precision.
+                    </p>
+
+                </div>
+
+
+
+                <div class="digital-feature-layout">
+
+
+                    <div class="digital-feature-image">
+
+                        <img src="assets/images/service-digital.jpg"
+                            alt="Modern digital technology and business workspace">
+
+
+                        <div class="digital-image-content">
+
+                            <span>THE DIGITAL ADVANTAGE</span>
+
+                            <h3>
+                                Technology
+                                with purpose.
+                            </h3>
+
+                            <p>
+                                Create experiences and systems
+                                designed for the future.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="digital-feature-list">
+
+
+                        <article class="digital-feature-item">
+
+                            <div class="digital-item-top">
+                                <span>01</span>
+                                <i class="fa-solid fa-display"></i>
+                            </div>
+
+                            <h3>Digital Experience</h3>
+
+                            <p>
+                                Design intuitive digital journeys
+                                that connect your business with
+                                customers and employees.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="digital-feature-item">
+
+                            <div class="digital-item-top">
+                                <span>02</span>
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+
+                            <h3>Process Automation</h3>
+
+                            <p>
+                                Simplify repetitive workflows,
+                                reduce operational friction
+                                and improve efficiency.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="digital-feature-item">
+
+                            <div class="digital-item-top">
+                                <span>03</span>
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+
+                            <h3>Technology Modernisation</h3>
+
+                            <p>
+                                Move towards flexible, scalable
+                                technology systems that support
+                                evolving business needs.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="digital-feature-item">
+
+                            <div class="digital-item-top">
+                                <span>04</span>
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <h3>Data & Analytics</h3>
+
+                            <p>
+                                Transform information into
+                                actionable insights for
+                                smarter decision-making.
+                            </p>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION 05 — GROWTH & PERFORMANCE
+        ====================================================== -->
+
+        <section class="growth-service" id="growthService">
+
+            <div class="growth-service-container">
+
+
+                <div class="growth-service-top">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            <span></span>
+                            GROWTH & PERFORMANCE
+                            <span class="eyebrow-line"></span>
+                            05 — 07
+                        </div>
+
+                        <h2>
+                            Progress that
+                            <span>performs.</span>
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        Sustainable growth is built through
+                        the right opportunities, disciplined
+                        execution and continuous improvement.
+                        We help you turn progress into performance.
+                    </p>
+
+                </div>
+
+
+
+                <div class="growth-service-grid">
+
+
+                    <article class="growth-card growth-card-large">
+
+                        <img src="assets/images/service-growth.jpg"
+                            alt="Business growth and performance planning">
+
+                        <div class="growth-card-overlay">
+
+                            <span>01 / BUSINESS EXPANSION</span>
+
+                            <h3>
+                                Find your
+                                next opportunity.
+                            </h3>
+
+                            <p>
+                                Discover new markets, customer segments
+                                and opportunities for meaningful expansion.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="growth-card growth-card-small">
+
+                        <div class="growth-card-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <span>02 / PERFORMANCE</span>
+
+                        <h3>
+                            Measure what
+                            matters.
+                        </h3>
+
+                        <p>
+                            Establish meaningful performance indicators,
+                            track progress and identify areas
+                            for continuous improvement.
+                        </p>
+
+                        <a href="contact.html">
+                            Learn more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="growth-card growth-card-small growth-card-dark">
+
+                        <div class="growth-card-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <span>03 / ORGANISATION</span>
+
+                        <h3>
+                            Empower your
+                            people.
+                        </h3>
+
+                        <p>
+                            Strengthen capabilities, align teams
+                            and build an organisation ready
+                            to adapt and grow.
+                        </p>
+
+                        <a href="contact.html">
+                            Learn more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="growth-bottom">
+
+                    <span>GROW WITH PURPOSE.</span>
+
+                    <span>PERFORM WITH CONFIDENCE.</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION 06 — OUR ENGAGEMENT PROCESS
+        ====================================================== -->
+
+        <section class="service-process" id="serviceProcess">
+
+            <div class="service-process-container">
+
+
+                <div class="process-heading">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        HOW WE WORK
+                        <span class="eyebrow-line"></span>
+                        06 — 07
+                    </div>
+
+
+                    <h2>
+                        A clear process.
+                        <span>A stronger outcome.</span>
+                    </h2>
+
+
+                    <p>
+                        Every engagement is different, but our
+                        approach remains consistent: understand
+                        deeply, plan intelligently and execute
+                        with purpose.
+                    </p>
+
+                </div>
+
+
+
+                <div class="process-layout">
+
+
+                    <div class="process-image">
+
+                        <img src="assets/images/service-process.jpg"
+                            alt="Consulting team working together on a project">
+
+                        <div class="process-image-caption">
+
+                            <span>THE VANTAGE METHOD</span>
+
+                            <h3>
+                                From first conversation
+                                to lasting impact.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="process-timeline">
+
+
+                        <div class="process-step active">
+
+                            <div class="process-step-number">
+                                01
+                            </div>
+
+                            <div class="process-step-content">
+
+                                <span>DISCOVER</span>
+
+                                <h3>Understand the challenge.</h3>
+
+                                <p>
+                                    We listen, ask the right questions
+                                    and understand your business,
+                                    goals and current challenges.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="process-step">
+
+                            <div class="process-step-number">
+                                02
+                            </div>
+
+                            <div class="process-step-content">
+
+                                <span>DEFINE</span>
+
+                                <h3>Shape the right direction.</h3>
+
+                                <p>
+                                    We analyse the findings,
+                                    identify opportunities and
+                                    develop a focused strategic roadmap.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="process-step">
+
+                            <div class="process-step-number">
+                                03
+                            </div>
+
+                            <div class="process-step-content">
+
+                                <span>DELIVER</span>
+
+                                <h3>Turn plans into action.</h3>
+
+                                <p>
+                                    We work alongside your team
+                                    to put the strategy into practice
+                                    with clarity and accountability.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="process-step">
+
+                            <div class="process-step-number">
+                                04
+                            </div>
+
+                            <div class="process-step-content">
+
+                                <span>DEVELOP</span>
+
+                                <h3>Build lasting progress.</h3>
+
+                                <p>
+                                    We review outcomes, measure
+                                    performance and identify
+                                    opportunities for what comes next.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION 07 — FINAL CTA
+        ====================================================== -->
+
+        <section class="services-final-cta" id="servicesCTA">
+
+            <div class="services-cta-image">
+
+                <img src="assets/images/services-cta.jpg"
+                    alt="Modern business office representing future opportunities">
+
+            </div>
+
+
+            <div class="services-cta-overlay"></div>
+
+
+            <div class="services-cta-container">
+
+
+                <div class="section-eyebrow">
+                    <span></span>
+                    LET'S MOVE FORWARD
+                    <span class="eyebrow-line"></span>
+                    07 — 07
+                </div>
+
+
+                <h2>
+                    Your next chapter
+                    <span>starts with a conversation.</span>
+                </h2>
+
+
+                <p>
+                    Whether you're looking for strategic direction,
+                    digital transformation or a stronger growth
+                    roadmap, we're ready to explore what's possible.
+                </p>
+
+
+                <div class="services-cta-actions">
+
+                    <a href="contact.html" class="services-cta-button">
+
+                        Start a Conversation
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a href="about.html" class="services-cta-secondary">
+
+                        Discover VANTAGE
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="services-cta-bottom">
+
+                    <span>THINK FORWARD. MOVE WITH PURPOSE.</span>
+
+                    <span>VANTAGE / EST. 2026</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+<footer class="site-footer" id="footer">
+
+    <!-- 3D BACKGROUND ELEMENTS -->
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+
+    <div class="footer-light footer-light-one" aria-hidden="true"></div>
+    <div class="footer-light footer-light-two" aria-hidden="true"></div>
+
+    <div class="footer-3d-scene" aria-hidden="true">
+
+        <div class="footer-orb footer-orb-one"></div>
+        <div class="footer-orb footer-orb-two"></div>
+        <div class="footer-orb footer-orb-three"></div>
+
+        <div class="footer-ring"></div>
+        <div class="footer-cube"></div>
+        <div class="footer-cross"></div>
+
+    </div>
+
+
+    <!-- FOOTER TOP -->
+    <div class="footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-symbol">V.</span>
+
+                <span class="footer-logo-text">
+                    VANTAGE
+                    <small>STRATEGY & CONSULTING</small>
+                </span>
+            </a>
+
+            <p>
+                Strategic thinking,<br>
+                meaningful partnerships and<br>
+                transformative business solutions<br>
+                for a world in motion.
+            </p>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-socials">
+
+                <a href="404.html" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="404.html" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="404.html" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="404.html" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                EXPLORE
+            </span>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Expertise</a>
+            <a href="work.html">Our Work</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                OUR EXPERTISE
+            </span>
+
+            <a href="services.html">Business Strategy</a>
+            <a href="services.html">Digital Transformation</a>
+            <a href="services.html">Growth Consulting</a>
+            <a href="services.html">Technology Advisory</a>
+            <a href="services.html">Market Intelligence</a>
+
+        </div>
+
+
+        <!-- STUDIO CONTACT -->
+        <div class="footer-column footer-contact">
+
+            <span class="footer-heading">
+                GET IN TOUCH
+            </span>
+
+
+            <!-- LOCATION -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        OUR LOCATION
+                    </span>
+
+                    <a href="404.html">
+                        Chennai,<br>
+                        Tamil Nadu,<br>
+                        India
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        EMAIL US
+                    </span>
+
+                    <a href="mailto:hello@vantageconsulting.com">
+                        hello@vantageconsulting.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSINESS ENQUIRIES -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        BUSINESS ENQUIRIES
+                    </span>
+
+                    <a href="contact.html">
+                        Let's discuss your next<br>
+                        strategic opportunity.
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBSCRIBE -->
+            <div class="footer-subscribe">
+
+                <div class="subscribe-input">
+
+                    <input
+                        type="email"
+                        id="footerEmail"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    class="subscribe-button"
+                    onclick="window.location.href='404.html'"
+                >
+
+                    STAY CONNECTED
+
+                    <span>↗</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+    
+
+</footer>
+
+
+
+
+
+<script src="js/main.js"></script>
+<script src="js/services.js"></script>
+
+</body>
+</html>

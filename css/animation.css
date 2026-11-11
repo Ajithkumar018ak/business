@@ -1,0 +1,1644 @@
+/* =========================================================
+   VANTAGE — ANIMATION STYLES
+========================================================= */
+
+/* PRELOADER ENTRANCE */
+
+.preloader-top {
+    animation: fadeDown .8s ease both;
+}
+
+.preloader-copy {
+    animation: fadeUp 1s .2s ease both;
+}
+
+.preloader-progress-area {
+    animation: fadeUp 1s .4s ease both;
+}
+
+.chess-king-container {
+    animation: kingFloat 3s ease-in-out infinite;
+}
+
+.king-shadow {
+    animation: shadowPulse 3s ease-in-out infinite;
+}
+
+.preloader-light {
+    animation: lightPulse 4s ease-in-out infinite;
+}
+
+.stair {
+    animation: stairGlow 3s ease-in-out infinite alternate;
+}
+
+.stair-2 { animation-delay: .15s; }
+.stair-3 { animation-delay: .3s; }
+.stair-4 { animation-delay: .45s; }
+.stair-5 { animation-delay: .6s; }
+.stair-6 { animation-delay: .75s; }
+.stair-7 { animation-delay: .9s; }
+.stair-8 { animation-delay: 1.05s; }
+
+/* PRELOADER EXIT CLASS
+   JS adds .loaded to #preloader */
+
+.preloader.loaded {
+    animation: preloaderExit 1s cubic-bezier(.7,0,.2,1) forwards;
+    pointer-events: none;
+}
+
+.preloader.loaded .preloader-scene {
+    animation: sceneZoomOut .9s ease forwards;
+}
+
+/* HEADER */
+
+.site-header {
+    animation: headerReveal .9s .2s ease both;
+}
+
+.brand-symbol span {
+    animation: brandBars 1.2s ease both;
+}
+
+.brand-symbol span:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.brand-symbol span:nth-child(3) {
+    animation-delay: .24s;
+}
+
+/* HERO */
+
+.hero-left {
+    animation: heroTextReveal 1s .2s ease both;
+}
+
+.hero-center {
+    animation: heroImageReveal 1.1s .35s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.hero-right {
+    animation: heroTextReveal 1s .5s ease both;
+}
+
+.hero-bottom-bar {
+    animation: fadeUp 1s .7s ease both;
+}
+
+.hero-image-frame.active img {
+    animation: heroImageScale 7s ease forwards;
+}
+
+.hero-floating-card {
+    animation: floatingCard 4s ease-in-out infinite;
+}
+
+.hero-dot,
+.testimonial-dot {
+    transition: width .35s ease, background .35s ease;
+}
+
+.hero-arrows button,
+.showcase-arrows button,
+.testimonial-arrows button {
+    transition: .35s ease;
+}
+
+/* IMAGE HOVER */
+
+.overview-main-image img,
+.overview-side-image img,
+.expertise-image img,
+.expertise-horizontal-image img,
+.why-image-main img,
+.showcase-image img,
+.approach-image img,
+.insights-bottom-image img,
+.cta-background img {
+    transition: transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+.overview-main-image:hover img,
+.overview-side-image:hover img,
+.expertise-card:hover img,
+.why-image-area:hover img,
+.showcase-slide:hover img,
+.approach-image:hover img,
+.insights-bottom-image:hover img {
+    transform: scale(1.055);
+}
+
+/* EXPERTISE CARDS */
+
+.expertise-card,
+.industry-item,
+.insight-stat-card {
+    transition:
+        transform .45s cubic-bezier(.2,.7,.2,1),
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+.expertise-card-dark:hover,
+.expertise-card-minimal:hover {
+    transform: translateY(-6px);
+}
+
+.expertise-decoration {
+    transition: transform .7s ease;
+}
+
+.expertise-card-dark:hover .expertise-decoration {
+    transform: scale(1.2) rotate(25deg);
+}
+
+/* INDUSTRY ICONS */
+
+.industry-icon {
+    transition: transform .4s ease, background .4s ease;
+}
+
+.industry-item:hover .industry-icon {
+    transform: rotateY(180deg);
+    background: rgba(199,166,106,.12);
+}
+
+/* WHY POINTS */
+
+.why-point {
+    transition: padding-left .35s ease;
+}
+
+.why-point:hover {
+    padding-left: 10px;
+}
+
+/* APPROACH STEPS */
+
+.approach-step {
+    transition: padding-left .35s ease;
+}
+
+.approach-step:hover {
+    padding-left: 12px;
+}
+
+.approach-step-number {
+    transition: transform .35s ease;
+}
+
+.approach-step:hover .approach-step-number {
+    transform: translateY(-4px);
+}
+
+/* CTA */
+
+.cta-background img {
+    animation: ctaSlowZoom 18s ease-in-out infinite alternate;
+}
+
+.cta-button i,
+.cta-button {
+    transition: .35s ease;
+}
+
+.cta-button:hover i {
+    transform: translate(4px, -4px);
+}
+
+/* FOOTER 3D OBJECTS */
+
+.footer-orb-one {
+    animation: orbFloat 8s ease-in-out infinite;
+}
+
+.footer-orb-two {
+    animation: orbFloat 6s 1s ease-in-out infinite reverse;
+}
+
+.footer-orb-three {
+    animation: orbFloat 7s 1.5s ease-in-out infinite;
+}
+
+.footer-ring {
+    animation: ringRotate 25s linear infinite;
+}
+
+.footer-cube {
+    animation: cubeFloat 7s ease-in-out infinite;
+}
+
+.footer-cross {
+    animation: crossRotate 15s linear infinite;
+}
+
+/* FOOTER LINKS */
+
+.footer-column > a,
+.footer-socials a,
+.footer-contact-info a {
+    transition: .3s ease;
+}
+
+/* SCROLL REVEAL
+   JS adds .is-visible when element enters viewport.
+   Content remains visible if JS does not run. */
+
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.image-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.reveal-up.is-visible {
+    animation: revealUp .8s ease both;
+}
+
+.reveal-left.is-visible {
+    animation: revealLeft .85s ease both;
+}
+
+.reveal-right.is-visible {
+    animation: revealRight .85s ease both;
+}
+
+.image-reveal.is-visible {
+    animation: imageReveal .9s ease both;
+}
+
+/* STAGGERED REVEALS */
+
+.expertise-card:nth-child(2).is-visible,
+.industry-item:nth-child(2).is-visible,
+.approach-step:nth-child(2).is-visible {
+    animation-delay: .1s;
+}
+
+.expertise-card:nth-child(3).is-visible,
+.industry-item:nth-child(3).is-visible,
+.approach-step:nth-child(3).is-visible {
+    animation-delay: .2s;
+}
+
+.industry-item:nth-child(4).is-visible,
+.approach-step:nth-child(4).is-visible {
+    animation-delay: .3s;
+}
+
+.industry-item:nth-child(5).is-visible {
+    animation-delay: .15s;
+}
+
+.industry-item:nth-child(6).is-visible {
+    animation-delay: .25s;
+}
+
+/* CUSTOM CURSOR SMOOTHNESS */
+
+.custom-cursor,
+.cursor-outline {
+    transition:
+        width .25s ease,
+        height .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes kingFloat {
+    0%, 100% {
+        transform: translate(-50%, 0) rotateY(-8deg);
+    }
+
+    50% {
+        transform: translate(-50%, -15px) rotateY(8deg);
+    }
+}
+
+@keyframes shadowPulse {
+    0%, 100% {
+        opacity: .45;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: .25;
+        transform: translateX(-50%) scale(.8);
+    }
+}
+
+@keyframes lightPulse {
+    0%, 100% {
+        opacity: .5;
+        transform: translateX(-50%) scale(.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.15);
+    }
+}
+
+@keyframes stairGlow {
+    from {
+        border-color: rgba(199,166,106,.15);
+    }
+
+    to {
+        border-color: rgba(199,166,106,.55);
+    }
+}
+
+@keyframes preloaderExit {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-3%);
+    }
+}
+
+@keyframes sceneZoomOut {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+}
+
+@keyframes headerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes brandBars {
+    from {
+        opacity: 0;
+        transform: scaleY(.2) skew(-22deg);
+        transform-origin: bottom;
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1) skew(-22deg);
+    }
+}
+
+@keyframes heroTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroImageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px) rotateY(-8deg) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateY(0) scale(1);
+    }
+}
+
+@keyframes heroImageScale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.09);
+    }
+}
+
+@keyframes floatingCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-12px, -22px, 0);
+    }
+}
+
+@keyframes ringRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cubeFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(135deg);
+    }
+}
+
+@keyframes crossRotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes revealRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes imageReveal {
+    from {
+        opacity: .5;
+        clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   VANTAGE — SERVICES PAGE ANIMATIONS
+===================================================== */
+
+/* =====================================================
+   01. GLOBAL REVEAL ANIMATION
+===================================================== */
+
+.services-js .service-reveal {
+    opacity: 0;
+    transform: translateY(38px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.services-js .service-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   02. HERO INTRO
+===================================================== */
+
+.services-hero.hero-loaded .section-eyebrow {
+    animation: heroFadeUp .8s .1s both;
+}
+
+.services-hero.hero-loaded h1 {
+    animation: heroFadeUp .9s .25s both;
+}
+
+.services-hero.hero-loaded .services-hero-description {
+    animation: heroFadeUp .9s .4s both;
+}
+
+.services-hero.hero-loaded .services-hero-actions {
+    animation: heroFadeUp .9s .55s both;
+}
+
+.services-hero.hero-loaded .services-hero-meta {
+    animation: heroFadeUp .9s .7s both;
+}
+
+.services-hero.hero-loaded .services-visual-label {
+    animation: heroFadeUp .8s .4s both;
+}
+
+.services-hero.hero-loaded .services-floating-card {
+    animation: floatingCardEnter 1s .65s both;
+}
+
+@keyframes heroFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes floatingCardEnter {
+
+    from {
+        opacity: 0;
+        transform: translate(-20px, 25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+}
+
+
+/* =====================================================
+   03. IMAGE REVEAL
+===================================================== */
+
+.services-js .service-image-reveal {
+    clip-path: inset(12% 8% 12% 8%);
+    transform: scale(1.06);
+    opacity: .5;
+    transition:
+        clip-path 1.1s cubic-bezier(.2,.7,.2,1),
+        transform 1.1s cubic-bezier(.2,.7,.2,1),
+        opacity 1s ease;
+}
+
+.services-js .service-image-reveal.image-visible {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* =====================================================
+   04. OVERVIEW CARDS
+===================================================== */
+
+.overview-service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.overview-service-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gold);
+    transition: width .45s ease;
+}
+
+.overview-service-card:hover::after {
+    width: 100%;
+}
+
+.overview-card-icon {
+    transition:
+        transform .4s ease,
+        background .4s ease;
+}
+
+.overview-service-card:hover .overview-card-icon {
+    transform: translateY(-5px) rotate(-5deg);
+    background: rgba(199,166,106,.25);
+}
+
+
+/* =====================================================
+   05. STRATEGY IMAGE MOTION
+===================================================== */
+
+.strategy-service-visual {
+    overflow: visible;
+}
+
+.strategy-image-main {
+    transition: transform .8s ease;
+}
+
+.strategy-service-visual:hover .strategy-image-main {
+    transform: translateY(-5px);
+}
+
+.strategy-image-small {
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.strategy-service-visual:hover .strategy-image-small {
+    transform: translate(-7px, -7px);
+}
+
+
+/* =====================================================
+   06. DIGITAL SERVICE ITEMS
+===================================================== */
+
+.digital-feature-item {
+    transition:
+        padding-left .4s ease,
+        border-color .4s ease;
+}
+
+.digital-feature-item:hover {
+    padding-left: 12px;
+    border-color: var(--gold);
+}
+
+.digital-item-top span {
+    transition: color .3s ease;
+}
+
+.digital-feature-item:hover .digital-item-top span {
+    color: var(--blue);
+}
+
+
+/* =====================================================
+   07. GROWTH CARDS
+===================================================== */
+
+.growth-card {
+    transition:
+        transform .5s cubic-bezier(.2,.7,.2,1),
+        box-shadow .5s ease;
+}
+
+.growth-card.card-hovered {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(17,27,39,.12);
+}
+
+.growth-card-icon {
+    transition:
+        transform .45s ease,
+        background .45s ease;
+}
+
+.growth-card:hover .growth-card-icon {
+    transform: rotate(-8deg) scale(1.08);
+    background: rgba(199,166,106,.18);
+}
+
+.growth-card-overlay {
+    transition: opacity .5s ease;
+}
+
+.growth-card-large:hover .growth-card-overlay {
+    opacity: .85;
+}
+
+
+/* =====================================================
+   08. PROCESS TIMELINE
+===================================================== */
+
+.process-step {
+    transition: transform .4s ease;
+}
+
+.process-step:hover {
+    transform: translateX(7px);
+}
+
+.process-step-number {
+    transition:
+        background .4s ease,
+        color .4s ease,
+        border-color .4s ease,
+        transform .4s ease;
+}
+
+.process-step.active .process-step-number {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 6px rgba(199,166,106,.12);
+}
+
+.process-step-content h3 {
+    transition: color .3s ease;
+}
+
+.process-step.active .process-step-content h3 {
+    color: var(--navy);
+}
+
+
+/* =====================================================
+   09. FINAL CTA ANIMATION
+===================================================== */
+
+.services-cta-container .section-eyebrow {
+    animation: ctaFadeIn .8s ease both;
+}
+
+.services-cta-container h2 {
+    animation: ctaFadeIn .9s .15s ease both;
+}
+
+.services-cta-container > p {
+    animation: ctaFadeIn .9s .3s ease both;
+}
+
+.services-cta-actions {
+    animation: ctaFadeIn .9s .45s ease both;
+}
+
+@keyframes ctaFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   10. BUTTON INTERACTIONS
+===================================================== */
+
+.primary-button,
+.services-cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-button::before,
+.services-cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 70%;
+    height: 100%;
+    background: rgba(255,255,255,.18);
+    transform: skewX(-20deg);
+    transition: left .65s ease;
+}
+
+.primary-button:hover::before,
+.services-cta-button:hover::before {
+    left: 140%;
+}
+
+
+/* =====================================================
+   11. SCROLL PROGRESS
+===================================================== */
+
+#scrollProgress {
+    transform-origin: left center;
+    transition: width .1s linear;
+}
+
+
+/* =====================================================
+   12. ANCHOR SCROLL OFFSET
+===================================================== */
+
+#servicesHero,
+#serviceOverview,
+#strategyService,
+#digitalService,
+#growthService,
+#serviceProcess,
+#servicesCTA {
+    scroll-margin-top: 90px;
+}
+
+
+/* =====================================================
+   13. REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .services-js .service-reveal,
+    .services-js .service-image-reveal {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .services-hero.hero-loaded *,
+    .services-cta-container *,
+    .overview-service-card,
+    .growth-card,
+    .process-step,
+    .strategy-image-main,
+    .strategy-image-small {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+
+
+
+/* =====================================================
+   VANTAGE — INDUSTRIES PAGE ANIMATIONS
+===================================================== */
+
+
+/* Scroll reveal initial state */
+
+.industries-js .industry-reveal {
+    opacity: 0;
+    transform: translateY(38px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2, .7, .2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.industries-js .industry-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Directional reveal */
+
+.industries-js .industry-reveal-left {
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: opacity .9s ease, transform .9s ease;
+}
+
+.industries-js .industry-reveal-right {
+    opacity: 0;
+    transform: translateX(45px);
+    transition: opacity .9s ease, transform .9s ease;
+}
+
+.industries-js .industry-reveal-left.is-visible,
+.industries-js .industry-reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Hero entrance */
+
+.industries-hero .section-eyebrow,
+.industries-hero h1,
+.industries-hero-description,
+.industries-hero-actions,
+.industries-hero-meta {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.industries-hero.hero-loaded .section-eyebrow {
+    animation: industryHeroUp .7s .1s ease forwards;
+}
+
+.industries-hero.hero-loaded h1 {
+    animation: industryHeroUp .9s .22s ease forwards;
+}
+
+.industries-hero.hero-loaded .industries-hero-description {
+    animation: industryHeroUp .8s .38s ease forwards;
+}
+
+.industries-hero.hero-loaded .industries-hero-actions {
+    animation: industryHeroUp .8s .52s ease forwards;
+}
+
+.industries-hero.hero-loaded .industries-hero-meta {
+    animation: industryHeroUp .8s .65s ease forwards;
+}
+
+.industries-hero.hero-loaded .industries-hero-visual {
+    animation: industryVisualEnter 1.1s .2s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.industries-hero.hero-loaded .industries-floating-card {
+    animation: industryFloatEnter .9s .9s ease both;
+}
+
+.industries-hero.hero-loaded .industries-hero-bottom {
+    animation: industryHeroUp .7s 1s ease both;
+}
+
+
+@keyframes industryHeroUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes industryVisualEnter {
+    from {
+        opacity: 0;
+        transform: translateX(45px) scale(.96);
+        clip-path: inset(0 0 0 15%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+@keyframes industryFloatEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Hero decorative circles */
+
+.industries-hero-background {
+    animation: industryCircleRotate 35s linear infinite;
+}
+
+@keyframes industryCircleRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Floating card */
+
+.industries-hero.hero-loaded .industries-floating-card {
+    animation:
+        industryFloatEnter .9s .9s ease both,
+        industryFloating 5s 1.9s ease-in-out infinite;
+}
+
+@keyframes industryFloating {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -9px;
+    }
+}
+
+
+/* Hero image reveal */
+
+.industries-hero-image img,
+.industry-card-image img,
+.industry-expertise-visual img,
+.industries-cta-image img {
+    will-change: transform;
+}
+
+
+/* Industry cards stagger */
+
+.industry-card {
+    transition:
+        transform .45s cubic-bezier(.2, .7, .2, 1),
+        box-shadow .45s ease;
+}
+
+.industry-card.is-visible {
+    animation: industryCardEnter .75s ease both;
+    animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes industryCardEnter {
+    from {
+        opacity: .3;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Card image overlay */
+
+.industry-card-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(199, 166, 106, .18),
+        transparent 55%
+    );
+    opacity: 0;
+    transition: opacity .5s ease;
+    pointer-events: none;
+}
+
+.industry-card:hover .industry-card-image::before {
+    opacity: 1;
+}
+
+
+/* Card number hover */
+
+.industry-card-number {
+    transition: transform .4s ease, background .4s ease;
+}
+
+.industry-card:hover .industry-card-number {
+    transform: rotate(-8deg) scale(1.08);
+    background: var(--white);
+}
+
+
+/* Expertise list animation */
+
+.expertise-item {
+    transition:
+        padding .35s ease,
+        background .35s ease;
+}
+
+.expertise-item:hover {
+    background: rgba(139, 169, 195, .07);
+}
+
+
+/* Approach cards */
+
+.approach-card {
+    transition:
+        background .4s ease,
+        transform .4s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-5px);
+}
+
+.approach-icon {
+    transition:
+        transform .5s cubic-bezier(.2, .7, .2, 1),
+        background .35s ease,
+        color .35s ease;
+}
+
+.approach-card:hover .approach-icon {
+    transform: rotateY(180deg);
+}
+
+
+/* Impact items */
+
+.impact-item > i {
+    transition: transform .45s ease;
+}
+
+.impact-item:hover > i {
+    transform: translateY(-7px) scale(1.12);
+}
+
+
+/* CTA image slow zoom */
+
+.industries-final-cta:hover .industries-cta-image img {
+    transform: scale(1.035);
+}
+
+.industries-cta-image img {
+    transition: transform 1.5s cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* CTA content entrance */
+
+.industries-final-cta.is-visible .industries-cta-container {
+    animation: industryHeroUp .9s ease both;
+}
+
+
+/* Buttons */
+
+.industries-hero .primary-button,
+.expertise-button,
+.industries-cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.industries-hero .primary-button::before,
+.expertise-button::before,
+.industries-cta-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    width: 35%;
+    height: 300%;
+    background: rgba(255, 255, 255, .18);
+    transform: rotate(25deg);
+    transition: left .6s ease;
+}
+
+.industries-hero .primary-button:hover::before,
+.expertise-button:hover::before,
+.industries-cta-button:hover::before {
+    left: 130%;
+}
+
+
+/* Smooth anchor movement */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#industryGrid,
+#industryIntro,
+#industryExpertise,
+#industryApproach,
+#industryImpact,
+#industriesCTA {
+    scroll-margin-top: 100px;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .industries-js .industry-reveal,
+    .industries-js .industry-reveal-left,
+    .industries-js .industry-reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .industries-hero *,
+    .industry-card,
+    .approach-card,
+    .impact-item,
+    .industries-cta-image img {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+
+
+/* =====================================================
+   VANTAGE — CONTACT PAGE ANIMATIONS
+===================================================== */
+
+/* Scroll reveal base */
+
+.contact-page-js .contact-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+    transition-delay: var(--contact-delay, 0ms);
+}
+
+.contact-page-js .contact-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Hero entrance */
+
+.contact-page-js .contact-hero-content .section-eyebrow {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-page-js .contact-hero.hero-loaded .contact-hero-content .section-eyebrow {
+    animation: contactHeroText .7s .1s ease forwards;
+}
+
+.contact-page-js .contact-hero-content h1 {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.contact-page-js .contact-hero.hero-loaded .contact-hero-content h1 {
+    animation: contactHeroText .9s .2s ease forwards;
+}
+
+.contact-page-js .contact-hero-description {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-page-js .contact-hero.hero-loaded .contact-hero-description {
+    animation: contactHeroText .8s .4s ease forwards;
+}
+
+.contact-page-js .contact-hero-actions {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-page-js .contact-hero.hero-loaded .contact-hero-actions {
+    animation: contactHeroText .8s .55s ease forwards;
+}
+
+.contact-page-js .contact-hero-meta {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-page-js .contact-hero.hero-loaded .contact-hero-meta {
+    animation: contactHeroText .8s .7s ease forwards;
+}
+
+.contact-page-js .contact-hero-visual {
+    opacity: 0;
+    transform: translateX(35px);
+}
+
+.contact-page-js .contact-hero.hero-loaded .contact-hero-visual {
+    animation: contactHeroVisual 1s .3s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+
+@keyframes contactHeroText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contactHeroVisual {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Hero image movement */
+
+.contact-hero-visual img,
+.contact-form-visual > img,
+.contact-cta-image img {
+    transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+
+.contact-hero-visual:hover img {
+    transform: scale(1.035);
+}
+
+
+/* Decorative frame */
+
+.contact-hero-visual::before {
+    transform: translate(12px, -12px);
+    opacity: .5;
+    transition: transform .7s ease, opacity .7s ease;
+}
+
+.contact-hero-visual:hover::before {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+/* Information cards */
+
+.contact-info-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gold);
+    transition: width .45s ease;
+}
+
+.contact-info-card:hover::after {
+    width: 100%;
+}
+
+.contact-info-icon {
+    transition: transform .4s ease, background .4s ease;
+}
+
+.contact-info-card:hover .contact-info-icon {
+    transform: rotate(-8deg) scale(1.08);
+    background: var(--navy);
+}
+
+
+/* Form focus animation */
+
+.contact-field input,
+.contact-field textarea,
+.contact-field select {
+    transition:
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus,
+.contact-field select:focus {
+    transform: translateY(-2px);
+}
+
+.contact-submit-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-submit-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        100deg,
+        transparent,
+        rgba(255,255,255,.2),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left .7s ease;
+}
+
+.contact-submit-button:hover::before {
+    left: 150%;
+}
+
+
+/* Why Vantage cards */
+
+.contact-why-card {
+    overflow: hidden;
+}
+
+.contact-why-card > i {
+    transition: transform .4s ease, background .4s ease;
+}
+
+.contact-why-card:hover > i {
+    transform: translateY(-5px) rotate(5deg);
+    background: rgba(199,166,106,.1);
+}
+
+.contact-why-card > span {
+    transition: transform .4s ease;
+}
+
+.contact-why-card:hover > span {
+    transform: translateY(-4px);
+}
+
+
+/* FAQ animation */
+
+.contact-faq-question i {
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+.contact-faq-item.active .contact-faq-question {
+    color: var(--gold);
+}
+
+.contact-faq-answer p {
+    transition: padding .35s ease;
+}
+
+
+/* CTA image */
+
+.contact-cta-image img {
+    transform: scale(1.04);
+}
+
+.contact-final-cta:hover .contact-cta-image img {
+    transform: scale(1);
+}
+
+
+/* CTA button */
+
+.contact-cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-cta-button i {
+    transition: transform .3s ease;
+}
+
+.contact-cta-button:hover i {
+    transform: translate(4px, -3px);
+}
+
+
+/* Form success */
+
+.contact-form-success.show {
+    animation: contactSuccessEnter .5s ease both;
+}
+
+@keyframes contactSuccessEnter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+    .contact-page-js .contact-hero-visual {
+        transform: translateY(25px);
+    }
+
+    .contact-page-js .contact-hero.hero-loaded .contact-hero-visual {
+        animation: contactHeroText .9s .35s ease forwards;
+    }
+
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-page-js .contact-reveal,
+    .contact-page-js .contact-hero-content *,
+    .contact-page-js .contact-hero-visual,
+    .contact-page-js .contact-info-card,
+    .contact-page-js .contact-why-card,
+    .contact-page-js .contact-submit-button,
+    .contact-page-js .contact-cta-button {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+}

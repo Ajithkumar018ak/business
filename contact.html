@@ -1,0 +1,1682 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | VANTAGE Strategy & Consulting</title>
+
+    <meta name="description"
+        content="Connect with VANTAGE Strategy & Consulting. Let's discuss your business challenges, strategic goals and opportunities for growth.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CONTACT PAGE CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- ANIMATION CSS -->
+    <link rel="stylesheet" href="css/animation.css">
+
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+<!-- =====================================================
+     SCROLL PROGRESS
+===================================================== -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+
+
+<!-- =====================================================
+     CINEMATIC 3D PRELOADER
+===================================================== -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-background"></div>
+
+    <div class="preloader-top">
+
+        <span>VANTAGE</span>
+
+        <span>EST. 2026</span>
+
+    </div>
+
+
+    <div class="preloader-scene">
+
+        <div class="staircase-perspective">
+
+            <div class="stair stair-1"></div>
+            <div class="stair stair-2"></div>
+            <div class="stair stair-3"></div>
+            <div class="stair stair-4"></div>
+            <div class="stair stair-5"></div>
+            <div class="stair stair-6"></div>
+            <div class="stair stair-7"></div>
+            <div class="stair stair-8"></div>
+
+        </div>
+
+
+        <div class="chess-king-container" id="chessKing">
+
+            <div class="king-shadow"></div>
+
+            <div class="chess-king">
+
+                <div class="king-cross"></div>
+
+                <div class="king-crown"></div>
+
+                <div class="king-head"></div>
+
+                <div class="king-body"></div>
+
+                <div class="king-base"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="preloader-light"></div>
+
+    </div>
+
+
+    <div class="preloader-bottom">
+
+        <div class="preloader-copy">
+
+            <span class="preloader-label">
+                STRATEGY IN MOTION
+            </span>
+
+            <h2>
+                Building a better<br>
+                business perspective.
+            </h2>
+
+            <p id="preloaderStatus">
+                Preparing your experience...
+            </p>
+
+        </div>
+
+
+        <div class="preloader-progress-area">
+
+            <div class="preloader-percentage" id="preloaderPercentage">
+                00%
+            </div>
+
+            <div class="preloader-track">
+
+                <div class="preloader-fill" id="preloaderFill"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CUSTOM CURSOR
+===================================================== -->
+
+<div class="custom-cursor" id="customCursor"></div>
+
+<div class="cursor-outline" id="cursorOutline"></div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-symbol">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+
+
+            <span class="brand-information">
+
+                <strong>VANTAGE</strong>
+
+                <small>STRATEGY & CONSULTING</small>
+
+            </span>
+
+        </a>
+
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-navigation">
+
+            <a href="index.html" class="nav-link ">Home</a>
+
+            <a href="about.html" class="nav-link">About</a>
+
+            <a href="services.html" class="nav-link">Services</a>
+
+            <a href="industries.html" class="nav-link">Industries</a>
+
+            <a href="contact.html" class="nav-link active">Contact</a>
+
+        </nav>
+
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button class="login-trigger" data-open-login>
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Sign In</span>
+
+            </button>
+
+
+            <a href="404.html" class="header-cta">
+
+                Let's Talk
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<aside class="mobile-drawer" id="mobileDrawer">
+
+    <div class="drawer-header">
+
+        <a href="index.html" class="drawer-brand">
+            VANTAGE
+        </a>
+
+        <button id="drawerClose" aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="drawer-content">
+
+        <span class="drawer-label">NAVIGATION / 2026</span>
+
+
+        <nav class="drawer-navigation">
+
+            <a href="index.html">
+                Home <span>01</span>
+            </a>
+
+            <a href="about.html">
+                About <span>02</span>
+            </a>
+
+            <a href="services.html">
+                Services <span>03</span>
+            </a>
+
+            <a href="industries.html">
+                Industries <span>04</span>
+            </a>
+
+            <a href="contact.html">
+                Contact <span>05</span>
+            </a>
+
+        </nav>
+
+
+        <div class="drawer-footer">
+
+            <p>Let's build something meaningful.</p>
+
+            <button data-open-login class="drawer-login">
+
+                <i class="fa-regular fa-user"></i>
+
+                Sign In
+
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+
+<!-- =====================================================
+     LOGIN MODAL
+===================================================== -->
+
+<div class="login-modal" id="loginModal" aria-hidden="true">
+
+    <div class="login-backdrop" data-close-login></div>
+
+
+    <div class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+
+
+        <button class="login-close" data-close-login aria-label="Close login">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- LOGIN VISUAL SIDE -->
+
+        <div class="login-visual">
+
+            <img
+                src="assets/images/office.jpg"
+                alt="Vantage corporate office"
+                loading="lazy"
+            >
+
+
+            <div class="login-visual-overlay"></div>
+
+
+            <div class="login-visual-content">
+
+                <span class="login-mini-label">
+                    VANTAGE / PRIVATE ACCESS
+                </span>
+
+
+                <h2>
+                    Your next<br>
+                    chapter starts<br>
+                    <span>here.</span>
+                </h2>
+
+
+                <p>
+                    A smarter workspace for modern business leaders.
+                </p>
+
+
+                <div class="login-security-badge">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure Enterprise Access
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOGIN FORM SIDE -->
+
+        <div class="login-form-panel">
+
+
+            <div class="login-form-brand">
+
+                <span class="brand-symbol">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>VANTAGE</strong>
+
+            </div>
+
+
+
+            <span class="login-eyebrow">
+                WELCOME BACK
+            </span>
+
+
+            <h2 id="loginTitle">
+                Sign in to your<br>
+                workspace.
+            </h2>
+
+
+            <p class="login-description">
+                Access your business consulting workspace securely.
+            </p>
+
+
+
+            <!-- LOGIN TABS -->
+
+            <div class="login-tabs">
+
+                <button class="login-tab active" data-login-tab="user">
+
+                    USER LOGIN
+
+                </button>
+
+
+                <button class="login-tab" data-login-tab="admin">
+
+                    ADMIN LOGIN
+
+                </button>
+
+            </div>
+
+
+
+            <!-- USER LOGIN -->
+
+            <form class="login-form active" id="userLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="userEmail">Email Address</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="userEmail"
+                            placeholder="name@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="userPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="userPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="userPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+
+            <!-- ADMIN LOGIN -->
+
+            <form class="login-form" id="adminLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="adminEmail">Administrator Email</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            placeholder="admin@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="adminPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter administrator password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="adminPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    ADMIN SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-bottom">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>256-bit encrypted session protection</span>
+
+            </div>
+
+
+            <div class="login-create">
+
+                New to Vantage?
+
+                <a href="404.html">Create an account</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+    <main>
+
+
+        <!-- =========================================
+             CONTACT HERO
+        ========================================== -->
+
+        <section class="contact-hero" id="contactHero">
+
+            <div class="contact-hero-background"></div>
+
+            <div class="contact-hero-container">
+
+                <div class="contact-hero-content">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        LET'S CONNECT
+                        <span class="eyebrow-line"></span>
+                    </div>
+
+                    <h1>
+                        Every great
+                        <span>move starts</span>
+                        with a conversation.
+                    </h1>
+
+                    <p class="contact-hero-description">
+                        Whether you're navigating change, exploring new
+                        opportunities or looking for a strategic partner,
+                        we're ready to listen.
+                    </p>
+
+                    <div class="contact-hero-actions">
+
+                        <a href="#contactForm" class="primary-button">
+                            Start a Conversation
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+
+                        <a href="mailto:hello@vantageconsulting.com"
+                            class="text-button">
+                            Email Our Team
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="contact-hero-meta">
+
+                        <div>
+                            <strong>01</strong>
+                            <span>SHARE YOUR VISION</span>
+                        </div>
+
+                        <div>
+                            <strong>02</strong>
+                            <span>EXPLORE POSSIBILITIES</span>
+                        </div>
+
+                        <div>
+                            <strong>03</strong>
+                            <span>MOVE FORWARD</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-hero-visual">
+
+                    <img src="assets/images/contact-hero.jpg"
+                        alt="Modern business meeting environment">
+
+                    <div class="contact-visual-caption">
+                        <span>VANTAGE / OPEN CONVERSATIONS</span>
+                        <strong>Ideas begin here.</strong>
+                    </div>
+
+                    <div class="contact-visual-index">
+                        <span>EST. 2026</span>
+                        <span>01 / CONTACT</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-hero-bottom">
+                <span>STRATEGY / INSIGHT / CONNECTION</span>
+                <span>LET'S BUILD WHAT'S NEXT <i class="fa-solid fa-arrow-down"></i></span>
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT INFORMATION
+        ========================================== -->
+
+        <section class="contact-information" id="contactInformation">
+
+            <div class="contact-information-container">
+
+                <div class="contact-information-heading">
+
+                    <span class="section-label">
+                        <span></span>
+                        GET IN TOUCH
+                    </span>
+
+                    <h2>
+                        Let's find the
+                        <span>right direction.</span>
+                    </h2>
+
+                    <p>
+                        Tell us what's on your mind. Our team is ready
+                        to understand your priorities and explore
+                        how we can work together.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-information-grid">
+
+
+                    <div class="contact-info-card">
+
+                        <span class="contact-info-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+
+                        <span class="contact-info-label">EMAIL US</span>
+
+                        <h3>Start with a message.</h3>
+
+                        <a href="mailto:hello@vantageconsulting.com">
+                            hello@vantageconsulting.com
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-info-card">
+
+                        <span class="contact-info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+
+                        <span class="contact-info-label">CALL OUR TEAM</span>
+
+                        <h3>Let's talk directly.</h3>
+
+                        <p>
+                            Connect with our team to discuss your
+                            business requirements.
+                        </p>
+
+                        <a href="contact.html#contactForm">
+                            Request a Call
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-info-card">
+
+                        <span class="contact-info-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </span>
+
+                        <span class="contact-info-label">WORKING HOURS</span>
+
+                        <h3>We're here to help.</h3>
+
+                        <p>
+                            Monday – Friday<br>
+                            09:00 AM – 06:00 PM
+                        </p>
+
+                        <span class="contact-info-note">
+                            By appointment for consultations.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT FORM
+        ========================================== -->
+
+        <section class="contact-form-section" id="contactForm">
+
+            <div class="contact-form-container">
+
+
+                <div class="contact-form-visual">
+
+                    <img src="assets/images/contact-meeting.jpg"
+                        alt="Business professionals discussing ideas">
+
+                    <div class="contact-form-visual-overlay"></div>
+
+
+                    <div class="contact-form-visual-content">
+
+                        <span>YOUR NEXT CHAPTER STARTS HERE</span>
+
+                        <h2>
+                            Let's turn
+                            <strong>possibilities</strong>
+                            into progress.
+                        </h2>
+
+                        <p>
+                            Meaningful partnerships begin with
+                            understanding. Share your thoughts
+                            and let's explore what's possible.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-form-visual-bottom">
+                        <span>VANTAGE / STRATEGY & CONSULTING</span>
+                        <span>EST. 2026</span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-form-content">
+
+                    <div class="contact-form-heading">
+
+                        <span class="section-label">
+                            <span></span>
+                            SEND AN ENQUIRY
+                        </span>
+
+                        <h2>
+                            Tell us about
+                            <span>your vision.</span>
+                        </h2>
+
+                        <p>
+                            Complete the form below and give us
+                            a little context about your requirements.
+                        </p>
+
+                    </div>
+
+
+                    <form class="main-contact-form" id="mainContactForm"
+                        novalidate>
+
+
+                        <div class="contact-form-row">
+
+                            <div class="contact-field">
+
+                                <label for="contactName">
+                                    Full Name <span>*</span>
+                                </label>
+
+                                <input type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Your full name"
+                                    autocomplete="name"
+                                    required>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="contact-field">
+
+                                <label for="contactEmail">
+                                    Email Address <span>*</span>
+                                </label>
+
+                                <input type="email"
+                                    id="contactEmail"
+                                    name="email"
+                                    placeholder="you@company.com"
+                                    autocomplete="email"
+                                    required>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-form-row">
+
+                            <div class="contact-field">
+
+                                <label for="contactPhone">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel"
+                                    id="contactPhone"
+                                    name="phone"
+                                    placeholder="+91 00000 00000"
+                                    autocomplete="tel">
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="contact-field">
+
+                                <label for="contactCompany">
+                                    Company Name
+                                </label>
+
+                                <input type="text"
+                                    id="contactCompany"
+                                    name="company"
+                                    placeholder="Your organization">
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-field">
+
+                            <label for="contactService">
+                                What can we help you with? <span>*</span>
+                            </label>
+
+                            <div class="contact-select-wrap">
+
+                                <select id="contactService"
+                                    name="service" required>
+
+                                    <option value="" disabled selected>
+                                        Select a service
+                                    </option>
+
+                                    <option value="Business Strategy">
+                                        Business Strategy
+                                    </option>
+
+                                    <option value="Digital Transformation">
+                                        Digital Transformation
+                                    </option>
+
+                                    <option value="Growth Consulting">
+                                        Growth Consulting
+                                    </option>
+
+                                    <option value="Operational Excellence">
+                                        Operational Excellence
+                                    </option>
+
+                                    <option value="Technology Advisory">
+                                        Technology Advisory
+                                    </option>
+
+                                    <option value="Industry Consulting">
+                                        Industry Consulting
+                                    </option>
+
+                                    <option value="Other">
+                                        Other Enquiry
+                                    </option>
+
+                                </select>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+
+
+                        <div class="contact-field">
+
+                            <label for="contactMessage">
+                                Tell us about your project <span>*</span>
+                            </label>
+
+                            <textarea id="contactMessage"
+                                name="message"
+                                rows="5"
+                                placeholder="Share your goals, challenges or ideas..."
+                                required></textarea>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+
+
+                        <label class="contact-consent">
+
+                            <input type="checkbox"
+                                id="contactConsent"
+                                name="consent"
+                                required>
+
+                            <span class="consent-custom"></span>
+
+                            <span>
+                                I agree to be contacted by VANTAGE
+                                regarding my enquiry.
+                            </span>
+
+                        </label>
+
+                        <small class="consent-error"></small>
+
+
+
+                        <button type="submit" class="contact-submit-button">
+
+                            <span>Submit Enquiry</span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <p class="contact-form-note">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Your information will be treated with care
+                            and confidentiality.
+                        </p>
+
+
+                        <div class="contact-form-success"
+                            id="contactFormSuccess" aria-live="polite">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+                                <strong>Thank you for reaching out.</strong>
+                                <span>Your form has been validated.</span>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             WHY CONNECT WITH US
+        ========================================== -->
+
+        <section class="contact-why" id="contactWhy">
+
+            <div class="contact-why-container">
+
+                <div class="contact-why-heading">
+
+                    <span class="section-label">
+                        <span></span>
+                        WHY VANTAGE
+                    </span>
+
+                    <h2>
+                        A conversation
+                        <span>with purpose.</span>
+                    </h2>
+
+                    <p>
+                        We believe the best solutions begin by asking
+                        the right questions and understanding what
+                        truly matters to your organization.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-why-grid">
+
+
+                    <div class="contact-why-card">
+
+                        <span>01</span>
+
+                        <i class="fa-solid fa-ear-listen"></i>
+
+                        <h3>We Listen First</h3>
+
+                        <p>
+                            Every business has a different story.
+                            We take time to understand yours before
+                            suggesting a direction.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-why-card">
+
+                        <span>02</span>
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <h3>We Think Strategically</h3>
+
+                        <p>
+                            We explore your challenges from different
+                            perspectives to identify meaningful
+                            opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-why-card">
+
+                        <span>03</span>
+
+                        <i class="fa-solid fa-handshake-angle"></i>
+
+                        <h3>We Work Together</h3>
+
+                        <p>
+                            We value collaboration, clear communication
+                            and practical thinking throughout the journey.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FAQ
+        ========================================== -->
+
+        <section class="contact-faq" id="contactFAQ">
+
+            <div class="contact-faq-container">
+
+
+                <div class="contact-faq-heading">
+
+                    <span class="section-label">
+                        <span></span>
+                        COMMON QUESTIONS
+                    </span>
+
+                    <h2>
+                        Before we
+                        <span>connect.</span>
+                    </h2>
+
+                    <p>
+                        A few helpful answers to make your first
+                        conversation with us easier.
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-faq-list">
+
+
+                    <div class="contact-faq-item active">
+
+                        <button class="contact-faq-question"
+                            aria-expanded="true">
+
+                            <span>
+                                01. What happens after I submit an enquiry?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="contact-faq-answer">
+
+                            <p>
+                                Once we receive your enquiry, our team
+                                can review the information you provide
+                                and discuss the most suitable next steps
+                                with you.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-faq-item">
+
+                        <button class="contact-faq-question"
+                            aria-expanded="false">
+
+                            <span>
+                                02. What types of businesses do you work with?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="contact-faq-answer">
+
+                            <p>
+                                We focus on organizations across technology,
+                                financial services, healthcare, manufacturing,
+                                retail, energy and other evolving business sectors.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-faq-item">
+
+                        <button class="contact-faq-question"
+                            aria-expanded="false">
+
+                            <span>
+                                03. Can I discuss a project before committing?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="contact-faq-answer">
+
+                            <p>
+                                Yes. You can share your requirements and
+                                explore whether our capabilities align
+                                with your business needs before making
+                                any decisions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-faq-item">
+
+                        <button class="contact-faq-question"
+                            aria-expanded="false">
+
+                            <span>
+                                04. Do you provide customized consulting?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="contact-faq-answer">
+
+                            <p>
+                                Our approach is designed around each
+                                organization's priorities, industry context
+                                and specific business challenges.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-faq-item">
+
+                        <button class="contact-faq-question"
+                            aria-expanded="false">
+
+                            <span>
+                                05. How can I reach your team directly?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="contact-faq-answer">
+
+                            <p>
+                                You can reach us through the enquiry form
+                                or email us at
+                                hello@vantageconsulting.com.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FINAL CTA
+        ========================================== -->
+
+        <section class="contact-final-cta" id="contactCTA">
+
+            <div class="contact-cta-image">
+
+                <img src="assets/images/contact-cta.jpg"
+                    alt="Contemporary architecture representing progress">
+
+            </div>
+
+            <div class="contact-cta-overlay"></div>
+
+
+            <div class="contact-cta-container">
+
+                <span class="section-label">
+                    <span></span>
+                    THE NEXT STEP STARTS NOW
+                </span>
+
+                <h2>
+                    Let's make your
+                    <span>next move count.</span>
+                </h2>
+
+                <p>
+                    Bring us your questions, challenges and ambitions.
+                    Together, let's explore what comes next.
+                </p>
+
+                <div class="contact-cta-actions">
+
+                    <a href="#contactForm" class="contact-cta-button">
+                        Start Your Conversation
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a href="mailto:hello@vantageconsulting.com"
+                        class="contact-cta-secondary">
+                        <i class="fa-regular fa-envelope"></i>
+                        Email Us Directly
+                    </a>
+
+                </div>
+
+
+                <div class="contact-cta-bottom">
+                    <span>VANTAGE / STRATEGY & CONSULTING</span>
+                    <span>BUILT FOR WHAT'S NEXT.</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    
+<footer class="site-footer" id="footer">
+
+    <!-- 3D BACKGROUND ELEMENTS -->
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+
+    <div class="footer-light footer-light-one" aria-hidden="true"></div>
+    <div class="footer-light footer-light-two" aria-hidden="true"></div>
+
+    <div class="footer-3d-scene" aria-hidden="true">
+
+        <div class="footer-orb footer-orb-one"></div>
+        <div class="footer-orb footer-orb-two"></div>
+        <div class="footer-orb footer-orb-three"></div>
+
+        <div class="footer-ring"></div>
+        <div class="footer-cube"></div>
+        <div class="footer-cross"></div>
+
+    </div>
+
+
+    <!-- FOOTER TOP -->
+    <div class="footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-symbol">V.</span>
+
+                <span class="footer-logo-text">
+                    VANTAGE
+                    <small>STRATEGY & CONSULTING</small>
+                </span>
+            </a>
+
+            <p>
+                Strategic thinking,<br>
+                meaningful partnerships and<br>
+                transformative business solutions<br>
+                for a world in motion.
+            </p>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-socials">
+
+                <a href="404.html" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="404.html" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="404.html" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="404.html" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                EXPLORE
+            </span>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Expertise</a>
+            <a href="work.html">Our Work</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                OUR EXPERTISE
+            </span>
+
+            <a href="services.html">Business Strategy</a>
+            <a href="services.html">Digital Transformation</a>
+            <a href="services.html">Growth Consulting</a>
+            <a href="services.html">Technology Advisory</a>
+            <a href="services.html">Market Intelligence</a>
+
+        </div>
+
+
+        <!-- STUDIO CONTACT -->
+        <div class="footer-column footer-contact">
+
+            <span class="footer-heading">
+                GET IN TOUCH
+            </span>
+
+
+            <!-- LOCATION -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        OUR LOCATION
+                    </span>
+
+                    <a href="404.html">
+                        Chennai,<br>
+                        Tamil Nadu,<br>
+                        India
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        EMAIL US
+                    </span>
+
+                    <a href="mailto:hello@vantageconsulting.com">
+                        hello@vantageconsulting.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSINESS ENQUIRIES -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        BUSINESS ENQUIRIES
+                    </span>
+
+                    <a href="contact.html">
+                        Let's discuss your next<br>
+                        strategic opportunity.
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBSCRIBE -->
+            <div class="footer-subscribe">
+
+                <div class="subscribe-input">
+
+                    <input
+                        type="email"
+                        id="footerEmail"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    class="subscribe-button"
+                    onclick="window.location.href='404.html'"
+                >
+
+                    STAY CONNECTED
+
+                    <span>↗</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+    
+
+</footer>
+
+
+
+
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</html>

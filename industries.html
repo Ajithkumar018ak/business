@@ -1,0 +1,1729 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industries | VANTAGE Strategy & Consulting</title>
+
+    <meta name="description"
+        content="VANTAGE partners with businesses across industries to solve complex challenges, accelerate transformation and create sustainable growth.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- INDUSTRIES PAGE CSS -->
+    <link rel="stylesheet" href="css/industries.css">
+
+    <!-- ANIMATION CSS -->
+    <link rel="stylesheet" href="css/animation.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+  
+
+<!-- =====================================================
+     SCROLL PROGRESS
+===================================================== -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+
+
+<!-- =====================================================
+     CINEMATIC 3D PRELOADER
+===================================================== -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-background"></div>
+
+    <div class="preloader-top">
+
+        <span>VANTAGE</span>
+
+        <span>EST. 2026</span>
+
+    </div>
+
+
+    <div class="preloader-scene">
+
+        <div class="staircase-perspective">
+
+            <div class="stair stair-1"></div>
+            <div class="stair stair-2"></div>
+            <div class="stair stair-3"></div>
+            <div class="stair stair-4"></div>
+            <div class="stair stair-5"></div>
+            <div class="stair stair-6"></div>
+            <div class="stair stair-7"></div>
+            <div class="stair stair-8"></div>
+
+        </div>
+
+
+        <div class="chess-king-container" id="chessKing">
+
+            <div class="king-shadow"></div>
+
+            <div class="chess-king">
+
+                <div class="king-cross"></div>
+
+                <div class="king-crown"></div>
+
+                <div class="king-head"></div>
+
+                <div class="king-body"></div>
+
+                <div class="king-base"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="preloader-light"></div>
+
+    </div>
+
+
+    <div class="preloader-bottom">
+
+        <div class="preloader-copy">
+
+            <span class="preloader-label">
+                STRATEGY IN MOTION
+            </span>
+
+            <h2>
+                Building a better<br>
+                business perspective.
+            </h2>
+
+            <p id="preloaderStatus">
+                Preparing your experience...
+            </p>
+
+        </div>
+
+
+        <div class="preloader-progress-area">
+
+            <div class="preloader-percentage" id="preloaderPercentage">
+                00%
+            </div>
+
+            <div class="preloader-track">
+
+                <div class="preloader-fill" id="preloaderFill"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CUSTOM CURSOR
+===================================================== -->
+
+<div class="custom-cursor" id="customCursor"></div>
+
+<div class="cursor-outline" id="cursorOutline"></div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-symbol">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+
+
+            <span class="brand-information">
+
+                <strong>VANTAGE</strong>
+
+                <small>STRATEGY & CONSULTING</small>
+
+            </span>
+
+        </a>
+
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-navigation">
+
+            <a href="index.html" class="nav-link ">Home</a>
+
+            <a href="about.html" class="nav-link">About</a>
+
+            <a href="services.html" class="nav-link">Services</a>
+
+            <a href="industries.html" class="nav-link active">Industries</a>
+
+            <a href="contact.html" class="nav-link">Contact</a>
+
+        </nav>
+
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button class="login-trigger" data-open-login>
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Sign In</span>
+
+            </button>
+
+
+            <a href="404.html" class="header-cta">
+
+                Let's Talk
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<aside class="mobile-drawer" id="mobileDrawer">
+
+    <div class="drawer-header">
+
+        <a href="index.html" class="drawer-brand">
+            VANTAGE
+        </a>
+
+        <button id="drawerClose" aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="drawer-content">
+
+        <span class="drawer-label">NAVIGATION / 2026</span>
+
+
+        <nav class="drawer-navigation">
+
+            <a href="index.html">
+                Home <span>01</span>
+            </a>
+
+            <a href="about.html">
+                About <span>02</span>
+            </a>
+
+            <a href="services.html">
+                Services <span>03</span>
+            </a>
+
+            <a href="industries.html">
+                Industries <span>04</span>
+            </a>
+
+            <a href="contact.html">
+                Contact <span>05</span>
+            </a>
+
+        </nav>
+
+
+        <div class="drawer-footer">
+
+            <p>Let's build something meaningful.</p>
+
+            <button data-open-login class="drawer-login">
+
+                <i class="fa-regular fa-user"></i>
+
+                Sign In
+
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+
+<!-- =====================================================
+     LOGIN MODAL
+===================================================== -->
+
+<div class="login-modal" id="loginModal" aria-hidden="true">
+
+    <div class="login-backdrop" data-close-login></div>
+
+
+    <div class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+
+
+        <button class="login-close" data-close-login aria-label="Close login">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- LOGIN VISUAL SIDE -->
+
+        <div class="login-visual">
+
+            <img
+                src="assets/images/office.jpg"
+                alt="Vantage corporate office"
+                loading="lazy"
+            >
+
+
+            <div class="login-visual-overlay"></div>
+
+
+            <div class="login-visual-content">
+
+                <span class="login-mini-label">
+                    VANTAGE / PRIVATE ACCESS
+                </span>
+
+
+                <h2>
+                    Your next<br>
+                    chapter starts<br>
+                    <span>here.</span>
+                </h2>
+
+
+                <p>
+                    A smarter workspace for modern business leaders.
+                </p>
+
+
+                <div class="login-security-badge">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure Enterprise Access
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOGIN FORM SIDE -->
+
+        <div class="login-form-panel">
+
+
+            <div class="login-form-brand">
+
+                <span class="brand-symbol">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <strong>VANTAGE</strong>
+
+            </div>
+
+
+
+            <span class="login-eyebrow">
+                WELCOME BACK
+            </span>
+
+
+            <h2 id="loginTitle">
+                Sign in to your<br>
+                workspace.
+            </h2>
+
+
+            <p class="login-description">
+                Access your business consulting workspace securely.
+            </p>
+
+
+
+            <!-- LOGIN TABS -->
+
+            <div class="login-tabs">
+
+                <button class="login-tab active" data-login-tab="user">
+
+                    USER LOGIN
+
+                </button>
+
+
+                <button class="login-tab" data-login-tab="admin">
+
+                    ADMIN LOGIN
+
+                </button>
+
+            </div>
+
+
+
+            <!-- USER LOGIN -->
+
+            <form class="login-form active" id="userLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="userEmail">Email Address</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="userEmail"
+                            placeholder="name@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="userPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="userPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="userPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+
+            <!-- ADMIN LOGIN -->
+
+            <form class="login-form" id="adminLoginForm">
+
+
+                <div class="form-group">
+
+                    <label for="adminEmail">Administrator Email</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            placeholder="admin@company.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="adminPassword">Password</label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter administrator password"
+                            required
+                        >
+
+                        <button type="button" class="password-toggle" data-password="adminPassword">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input type="checkbox">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+
+                    <a href="404.html">Forgot password?</a>
+
+                </div>
+
+
+
+                <button type="submit" class="login-submit">
+
+                    ADMIN SIGN IN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-bottom">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>256-bit encrypted session protection</span>
+
+            </div>
+
+
+            <div class="login-create">
+
+                New to Vantage?
+
+                <a href="404.html">Create an account</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <main>
+
+
+        <!-- =========================================
+             INDUSTRIES HERO
+        ========================================== -->
+
+        <section class="industries-hero" id="industriesHero">
+
+            <div class="industries-hero-background"></div>
+
+            <div class="industries-hero-container">
+
+                <div class="industries-hero-content">
+
+                    <div class="section-eyebrow">
+                        <span></span>
+                        INDUSTRIES WE SERVE
+                        <span class="eyebrow-line"></span>
+                    </div>
+
+                    <h1>
+                        Understanding
+                        <span>Industries.</span>
+                        Creating Impact.
+                    </h1>
+
+                    <p class="industries-hero-description">
+                        Every industry has its own challenges, opportunities
+                        and ambitions. We bring strategic thinking and
+                        practical expertise to help organizations move
+                        forward with confidence.
+                    </p>
+
+                    <div class="industries-hero-actions">
+
+                        <a href="#industryGrid" class="primary-button">
+                            Explore Industries
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+
+                        <a href="contact.html" class="text-button">
+                            Discuss Your Business
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="industries-hero-meta">
+
+                        <div>
+                            <strong>06</strong>
+                            <span>CORE INDUSTRIES</span>
+                        </div>
+
+                        <div>
+                            <strong>01</strong>
+                            <span>STRATEGIC PARTNER</span>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>GROWTH POSSIBILITIES</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="industries-hero-visual">
+
+                    <div class="industries-hero-image">
+
+                        <img src="assets/images/industries-hero.jpg"
+                            alt="Modern business district and corporate architecture">
+
+                    </div>
+
+                    <div class="industries-image-index">
+                        <span>01 / 06</span>
+                        <span>INDUSTRY PERSPECTIVES</span>
+                    </div>
+
+                    <div class="industries-floating-card">
+
+                        <span class="floating-card-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </span>
+
+                        <div>
+                            <strong>Beyond Boundaries</strong>
+                            <span>Ideas that move industries forward.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="industries-hero-bottom">
+                <span>STRATEGY / INSIGHT / TRANSFORMATION</span>
+                <span>SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down"></i></span>
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             INDUSTRY INTRODUCTION
+        ========================================== -->
+
+        <section class="industry-intro" id="industryIntro">
+
+            <div class="industry-intro-container">
+
+                <div class="industry-intro-left">
+
+                    <span class="section-label">
+                        <span></span>
+                        OUR INDUSTRY PERSPECTIVE
+                    </span>
+
+                    <h2>
+                        Different markets.
+                        <span>One clear vision.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="industry-intro-right">
+
+                    <p>
+                        Success requires more than understanding a business.
+                        It requires understanding the environment in which
+                        that business operates.
+                    </p>
+
+                    <p>
+                        At VANTAGE, we look beyond industry labels to
+                        understand market dynamics, customer expectations,
+                        operational challenges and emerging opportunities.
+                        This helps us create solutions that are relevant,
+                        adaptable and built for long-term progress.
+                    </p>
+
+                    <a href="about.html" class="industry-text-link">
+                        Discover Our Approach
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             INDUSTRY GRID
+        ========================================== -->
+
+        <section class="industry-grid-section" id="industryGrid">
+
+            <div class="industry-grid-container">
+
+                <div class="industry-grid-heading">
+
+                    <div>
+                        <span class="section-label">
+                            <span></span>
+                            OUR INDUSTRY EXPERTISE
+                        </span>
+
+                        <h2>
+                            Where we create
+                            <span>meaningful change.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Strategic perspectives designed around the
+                        realities of today's evolving business landscape.
+                    </p>
+
+                </div>
+
+
+                <div class="industry-grid">
+
+
+                    <!-- INDUSTRY 01 -->
+
+                    <article class="industry-card industry-card-large">
+
+                        <div class="industry-card-image">
+
+                            <img src="assets/images/industry-technology.jpg"
+                                alt="Technology and digital innovation">
+
+                            <span class="industry-card-number">01</span>
+
+                        </div>
+
+                        <div class="industry-card-content">
+
+                            <div class="industry-card-top">
+                                <span>01 / DIGITAL FUTURE</span>
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+
+                            <h3>Technology & Digital</h3>
+
+                            <p>
+                                Helping technology-driven organizations
+                                adapt, innovate and build scalable digital
+                                capabilities in a rapidly changing world.
+                            </p>
+
+                            <div class="industry-tags">
+                                <span>Digital Transformation</span>
+                                <span>Technology Strategy</span>
+                                <span>Innovation</span>
+                            </div>
+
+                            <a href="contact.html" class="industry-card-link">
+                                Explore Opportunities
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- INDUSTRY 02 -->
+
+                    <article class="industry-card">
+
+                        <div class="industry-card-image">
+
+                            <img src="assets/images/industry-finance.jpg"
+                                alt="Finance and banking industry">
+
+                            <span class="industry-card-number">02</span>
+
+                        </div>
+
+                        <div class="industry-card-content">
+
+                            <div class="industry-card-top">
+                                <span>02 / FINANCIAL GROWTH</span>
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+
+                            <h3>Financial Services</h3>
+
+                            <p>
+                                Supporting financial institutions with
+                                strategic planning, operational improvement
+                                and customer-focused transformation.
+                            </p>
+
+                            <div class="industry-tags">
+                                <span>Banking</span>
+                                <span>Financial Strategy</span>
+                            </div>
+
+                            <a href="contact.html" class="industry-card-link">
+                                Explore Opportunities
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- INDUSTRY 03 -->
+
+                    <article class="industry-card">
+
+                        <div class="industry-card-image">
+
+                            <img src="assets/images/industry-healthcare.jpg"
+                                alt="Healthcare and medical innovation">
+
+                            <span class="industry-card-number">03</span>
+
+                        </div>
+
+                        <div class="industry-card-content">
+
+                            <div class="industry-card-top">
+                                <span>03 / BETTER WELLBEING</span>
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <h3>Healthcare & Life Sciences</h3>
+
+                            <p>
+                                Enabling healthcare organizations to
+                                strengthen service delivery, improve
+                                efficiency and embrace meaningful innovation.
+                            </p>
+
+                            <div class="industry-tags">
+                                <span>Healthcare</span>
+                                <span>Life Sciences</span>
+                            </div>
+
+                            <a href="contact.html" class="industry-card-link">
+                                Explore Opportunities
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- INDUSTRY 04 -->
+
+                    <article class="industry-card">
+
+                        <div class="industry-card-image">
+
+                            <img src="assets/images/industry-manufacturing.jpg"
+                                alt="Advanced manufacturing operations">
+
+                            <span class="industry-card-number">04</span>
+
+                        </div>
+
+                        <div class="industry-card-content">
+
+                            <div class="industry-card-top">
+                                <span>04 / INDUSTRIAL EXCELLENCE</span>
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+
+                            <h3>Manufacturing & Engineering</h3>
+
+                            <p>
+                                Building stronger industrial operations
+                                through process optimization, business
+                                transformation and strategic growth.
+                            </p>
+
+                            <div class="industry-tags">
+                                <span>Operations</span>
+                                <span>Engineering</span>
+                            </div>
+
+                            <a href="contact.html" class="industry-card-link">
+                                Explore Opportunities
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- INDUSTRY 05 -->
+
+                    <article class="industry-card">
+
+                        <div class="industry-card-image">
+
+                            <img src="assets/images/industry-retail.jpg"
+                                alt="Retail and consumer experience">
+
+                            <span class="industry-card-number">05</span>
+
+                        </div>
+
+                        <div class="industry-card-content">
+
+                            <div class="industry-card-top">
+                                <span>05 / CUSTOMER EXPERIENCE</span>
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+
+                            <h3>Retail & Consumer</h3>
+
+                            <p>
+                                Helping consumer businesses understand
+                                changing expectations, strengthen their
+                                market position and create better experiences.
+                            </p>
+
+                            <div class="industry-tags">
+                                <span>Retail Strategy</span>
+                                <span>Customer Experience</span>
+                            </div>
+
+                            <a href="contact.html" class="industry-card-link">
+                                Explore Opportunities
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- INDUSTRY 06 -->
+
+                    <article class="industry-card industry-card-large">
+
+                        <div class="industry-card-image">
+
+                            <img src="assets/images/industry-energy.jpg"
+                                alt="Energy and sustainable infrastructure">
+
+                            <span class="industry-card-number">06</span>
+
+                        </div>
+
+                        <div class="industry-card-content">
+
+                            <div class="industry-card-top">
+                                <span>06 / SUSTAINABLE FUTURE</span>
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <h3>Energy & Sustainability</h3>
+
+                            <p>
+                                Supporting the transition toward responsible
+                                business practices, sustainable operations
+                                and future-ready energy solutions.
+                            </p>
+
+                            <div class="industry-tags">
+                                <span>Clean Energy</span>
+                                <span>Sustainability</span>
+                                <span>Infrastructure</span>
+                            </div>
+
+                            <a href="contact.html" class="industry-card-link">
+                                Explore Opportunities
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CROSS INDUSTRY EXPERTISE
+        ========================================== -->
+
+        <section class="industry-expertise" id="industryExpertise">
+
+            <div class="industry-expertise-container">
+
+                <div class="industry-expertise-visual">
+
+                    <img src="assets/images/industry-expertise.jpg"
+                        alt="Business professionals collaborating on strategy">
+
+                    <div class="expertise-image-label">
+                        <span>VANTAGE / INSIGHT</span>
+                        <strong>Thinking beyond the obvious.</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="industry-expertise-content">
+
+                    <span class="section-label">
+                        <span></span>
+                        OUR CROSS-INDUSTRY CAPABILITIES
+                    </span>
+
+                    <h2>
+                        Expertise that
+                        <span>connects the dots.</span>
+                    </h2>
+
+                    <p class="expertise-description">
+                        While every industry is different, many business
+                        challenges share common foundations. Our capabilities
+                        bring these perspectives together to create stronger
+                        outcomes.
+                    </p>
+
+
+                    <div class="expertise-list">
+
+                        <div class="expertise-item">
+
+                            <span>01</span>
+
+                            <div>
+                                <h3>Business Strategy</h3>
+                                <p>
+                                    Clear direction, market positioning
+                                    and sustainable growth planning.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+                        <div class="expertise-item">
+
+                            <span>02</span>
+
+                            <div>
+                                <h3>Digital Transformation</h3>
+                                <p>
+                                    Modern capabilities that improve
+                                    business performance and adaptability.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+                        <div class="expertise-item">
+
+                            <span>03</span>
+
+                            <div>
+                                <h3>Operational Excellence</h3>
+                                <p>
+                                    Better processes, improved efficiency
+                                    and stronger execution.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+
+                        <div class="expertise-item">
+
+                            <span>04</span>
+
+                            <div>
+                                <h3>Growth & Innovation</h3>
+                                <p>
+                                    New opportunities, customer value
+                                    and long-term business development.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <a href="services.html" class="expertise-button">
+                        Discover Our Services
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             INDUSTRY APPROACH
+        ========================================== -->
+
+        <section class="industry-approach" id="industryApproach">
+
+            <div class="industry-approach-container">
+
+                <div class="industry-approach-heading">
+
+                    <span class="section-label">
+                        <span></span>
+                        HOW WE THINK
+                    </span>
+
+                    <h2>
+                        A perspective built
+                        <span>around your industry.</span>
+                    </h2>
+
+                    <p>
+                        We combine research, strategic thinking and
+                        collaborative execution to understand what
+                        matters most to your business.
+                    </p>
+
+                </div>
+
+
+                <div class="industry-approach-grid">
+
+                    <div class="approach-card">
+
+                        <span class="approach-number">01</span>
+
+                        <div class="approach-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+
+                        <h3>Understand</h3>
+
+                        <p>
+                            We study your industry, market conditions,
+                            business priorities and unique challenges.
+                        </p>
+
+                        <span class="approach-bottom">DISCOVER THE CONTEXT</span>
+
+                    </div>
+
+
+                    <div class="approach-card">
+
+                        <span class="approach-number">02</span>
+
+                        <div class="approach-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+
+                        <h3>Strategize</h3>
+
+                        <p>
+                            We identify opportunities and develop
+                            practical strategies aligned with your goals.
+                        </p>
+
+                        <span class="approach-bottom">DEFINE THE DIRECTION</span>
+
+                    </div>
+
+
+                    <div class="approach-card">
+
+                        <span class="approach-number">03</span>
+
+                        <div class="approach-icon">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+
+                        <h3>Transform</h3>
+
+                        <p>
+                            We turn strategic ideas into meaningful
+                            initiatives and measurable progress.
+                        </p>
+
+                        <span class="approach-bottom">MAKE IT HAPPEN</span>
+
+                    </div>
+
+
+                    <div class="approach-card">
+
+                        <span class="approach-number">04</span>
+
+                        <div class="approach-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3>Grow</h3>
+
+                        <p>
+                            We focus on sustainable improvements
+                            that support long-term business success.
+                        </p>
+
+                        <span class="approach-bottom">CREATE LASTING VALUE</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             INDUSTRY IMPACT
+        ========================================== -->
+
+        <section class="industry-impact" id="industryImpact">
+
+            <div class="industry-impact-container">
+
+                <div class="industry-impact-top">
+
+                    <div>
+
+                        <span class="section-label">
+                            <span></span>
+                            THE VANTAGE DIFFERENCE
+                        </span>
+
+                        <h2>
+                            More than industry
+                            <span>knowledge.</span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        We connect business understanding with fresh
+                        perspectives to help organizations make
+                        confident decisions in complex environments.
+                    </p>
+
+                </div>
+
+
+                <div class="industry-impact-grid">
+
+                    <div class="impact-item">
+                        <span class="impact-index">01</span>
+                        <i class="fa-solid fa-eye"></i>
+                        <h3>Fresh Perspectives</h3>
+                        <p>
+                            See challenges differently and identify
+                            opportunities others may overlook.
+                        </p>
+                    </div>
+
+
+                    <div class="impact-item">
+                        <span class="impact-index">02</span>
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>Focused Solutions</h3>
+                        <p>
+                            Align business priorities with practical,
+                            purpose-driven strategic actions.
+                        </p>
+                    </div>
+
+
+                    <div class="impact-item">
+                        <span class="impact-index">03</span>
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>Collaborative Thinking</h3>
+                        <p>
+                            Bring people, ideas and expertise together
+                            to solve complex business problems.
+                        </p>
+                    </div>
+
+
+                    <div class="impact-item">
+                        <span class="impact-index">04</span>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <h3>Future Readiness</h3>
+                        <p>
+                            Prepare your organization to adapt,
+                            evolve and grow with confidence.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FINAL CTA
+        ========================================== -->
+
+        <section class="industries-final-cta" id="industriesCTA">
+
+            <div class="industries-cta-image">
+
+                <img src="assets/images/industries-cta.jpg"
+                    alt="Modern corporate architecture">
+
+            </div>
+
+            <div class="industries-cta-overlay"></div>
+
+
+            <div class="industries-cta-container">
+
+                <span class="section-label">
+                    <span></span>
+                    LET'S MOVE FORWARD
+                </span>
+
+                <h2>
+                    Your industry is changing.
+                    <span>Your next move matters.</span>
+                </h2>
+
+                <p>
+                    Let's explore how strategic thinking and the right
+                    expertise can help your organization move forward.
+                </p>
+
+
+                <div class="industries-cta-actions">
+
+                    <a href="contact.html" class="industries-cta-button">
+                        Start a Conversation
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a href="services.html" class="industries-cta-secondary">
+                        Explore Our Services
+                    </a>
+
+                </div>
+
+
+                <div class="industries-cta-bottom">
+                    <span>VANTAGE / STRATEGY & CONSULTING</span>
+                    <span>BUILT FOR WHAT'S NEXT.</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+<footer class="site-footer" id="footer">
+
+    <!-- 3D BACKGROUND ELEMENTS -->
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+
+    <div class="footer-light footer-light-one" aria-hidden="true"></div>
+    <div class="footer-light footer-light-two" aria-hidden="true"></div>
+
+    <div class="footer-3d-scene" aria-hidden="true">
+
+        <div class="footer-orb footer-orb-one"></div>
+        <div class="footer-orb footer-orb-two"></div>
+        <div class="footer-orb footer-orb-three"></div>
+
+        <div class="footer-ring"></div>
+        <div class="footer-cube"></div>
+        <div class="footer-cross"></div>
+
+    </div>
+
+
+    <!-- FOOTER TOP -->
+    <div class="footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-symbol">V.</span>
+
+                <span class="footer-logo-text">
+                    VANTAGE
+                    <small>STRATEGY & CONSULTING</small>
+                </span>
+            </a>
+
+            <p>
+                Strategic thinking,<br>
+                meaningful partnerships and<br>
+                transformative business solutions<br>
+                for a world in motion.
+            </p>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-socials">
+
+                <a href="404.html" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="404.html" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="404.html" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="404.html" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                EXPLORE
+            </span>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Expertise</a>
+            <a href="work.html">Our Work</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                OUR EXPERTISE
+            </span>
+
+            <a href="services.html">Business Strategy</a>
+            <a href="services.html">Digital Transformation</a>
+            <a href="services.html">Growth Consulting</a>
+            <a href="services.html">Technology Advisory</a>
+            <a href="services.html">Market Intelligence</a>
+
+        </div>
+
+
+        <!-- STUDIO CONTACT -->
+        <div class="footer-column footer-contact">
+
+            <span class="footer-heading">
+                GET IN TOUCH
+            </span>
+
+
+            <!-- LOCATION -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        OUR LOCATION
+                    </span>
+
+                    <a href="404.html">
+                        Chennai,<br>
+                        Tamil Nadu,<br>
+                        India
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        EMAIL US
+                    </span>
+
+                    <a href="mailto:hello@vantageconsulting.com">
+                        hello@vantageconsulting.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSINESS ENQUIRIES -->
+            <div class="footer-contact-item">
+
+                <div class="footer-contact-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+                <div class="footer-contact-info">
+
+                    <span class="contact-label">
+                        BUSINESS ENQUIRIES
+                    </span>
+
+                    <a href="contact.html">
+                        Let's discuss your next<br>
+                        strategic opportunity.
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBSCRIBE -->
+            <div class="footer-subscribe">
+
+                <div class="subscribe-input">
+
+                    <input
+                        type="email"
+                        id="footerEmail"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    class="subscribe-button"
+                    onclick="window.location.href='404.html'"
+                >
+
+                    STAY CONNECTED
+
+                    <span>↗</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+    
+
+</footer>
+
+
+
+
+
+<script src="js/main.js"></script>
+<script src="js/industries.js"></script>
+
+</body>
+</html>
