@@ -323,3 +323,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const carousel = document.getElementById("perspectiveCarousel");
+    const cards = document.querySelectorAll(".perspective-card");
+
+    if (!carousel || cards.length === 0) return;
+
+    let currentIndex = 0;
+    let autoPlay;
+
+    const totalCards = cards.length;
+
+    function updateCarousel() {
+
+        cards.forEach((card, index) => {
+
+            card.classList.remove("active");
+
+            const position =
+                (index - currentIndex + totalCards) % totalCards;
+
+            card.style.zIndex = totalCards - position;
+
+            if (position === 0) {
+                card.classList.add("active");
+                card.style.transform =
+                    "translate(-50%, -50%) translateX(0) rotateY(0deg) scale(1)";
+                card.style.opacity = "1";
+                card.style.pointerEvents = "auto";
+            }
+
+            else if (position === 1) {
+                card.style.transform =
+                    "translate(-50%, -50%) translateX(65%) rotateY(-25deg) scale(0.8)";
+                card.style.opacity = "0.7";
+                card.style.pointerEvents = "none";
+            }
+
+            else if (position === totalCards - 1) {
+                card.style.transform =
+                    "translate(-50%, -50%) translateX(-65%) rotateY(25deg) scale(0.8)";
+                card.style.opacity = "0.7";
+                card.style.pointerEvents = "none";
+            }
+
+            else {
+                card.style.transform =
+                    "translate(-50%, -50%) translateX(0) scale(0.5)";
+                card.style.opacity = "0";
+                card.style.pointerEvents = "none";
+            }
+
+        });
+
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateCarousel();
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        autoPlay = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoPlay);
+    }
+
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
+
+    updateCarousel();
+    startAutoplay();
+
+});

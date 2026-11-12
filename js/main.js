@@ -1437,3 +1437,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+
+
+
+
+
+
+/* ============================================
+   VANTAGE LOGIN - DASHBOARD REDIRECTION
+============================================ */
+
+// USER LOGIN
+const userLoginForm = document.getElementById("userLoginForm");
+
+// ADMIN LOGIN
+const adminLoginForm = document.getElementById("adminLoginForm");
+
+
+// USER LOGIN SUBMIT
+if (userLoginForm) {
+
+    userLoginForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = document.getElementById("userEmail").value.trim();
+
+        const password = document.getElementById("userPassword").value.trim();
+
+        if (!email || !password) {
+            alert("Please enter your email and password.");
+            return;
+        }
+
+        // USER DASHBOARD REDIRECT
+        window.location.href = "user-dashboard.html";
+
+    });
+
+}
+
+
+// ADMIN LOGIN SUBMIT
+if (adminLoginForm) {
+
+    adminLoginForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = document.getElementById("adminEmail").value.trim();
+
+        const password = document.getElementById("adminPassword").value.trim();
+
+        if (!email || !password) {
+            alert("Please enter administrator email and password.");
+            return;
+        }
+
+        // ADMIN DASHBOARD REDIRECT
+        window.location.href = "admin-dashboard.html";
+
+    });
+
+}

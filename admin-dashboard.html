@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root {
+    --bg:#f3f5f8;
+    --white:#fff;
+    --navy:#111e32;
+    --navy2:#1b2d47;
+    --gold:#c7a66a;
+    --text:#243247;
+    --muted:#8993a2;
+    --line:#e9edf2;
+    --green:#239b72;
+    --red:#df6262;
+    --blue:#477fc5;
+    --font:'DM Sans',sans-serif;
+    --heading:'Manrope',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.admin-layout{min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{
+    width:260px;position:fixed;inset:0 auto 0 0;
+    background:var(--navy);color:#fff;padding:27px 18px;
+    display:flex;flex-direction:column;z-index:100;
+}
+.brand{display:flex;align-items:center;gap:12px;padding:0 10px 30px}
+.brand-icon{
+    width:43px;height:43px;border:1px solid rgba(199,166,106,.6);
+    display:grid;place-items:center;color:var(--gold);
+    font-size:20px;border-radius:12px
+}
+.brand-name{font:800 18px var(--heading);letter-spacing:2px}
+.brand-name small{display:block;font:500 9px var(--font);letter-spacing:3px;color:#9caabd;margin-top:4px}
+.sidebar-label{font-size:10px;letter-spacing:2px;color:#718096;padding:15px 12px 10px}
+.nav-list{display:grid;gap:6px}
+.nav-item{
+    display:flex;align-items:center;gap:13px;padding:13px 14px;
+    color:#aeb9c9;border-radius:9px;font-size:13px;font-weight:600;
+    transition:.25s;cursor:pointer
+}
+.nav-item i{width:18px;text-align:center;font-size:15px}
+.nav-item:hover,.nav-item.active{background:#263a55;color:#fff}
+.nav-item.active{box-shadow:inset 3px 0 var(--gold)}
+.nav-item.active i{color:var(--gold)}
+.sidebar-bottom{margin-top:auto}
+.admin-mini{
+    display:flex;align-items:center;gap:10px;padding:17px 9px;
+    border-top:1px solid rgba(255,255,255,.1);margin-top:20px
+}
+.admin-avatar{width:36px;height:36px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:var(--navy);font-weight:800}
+.admin-mini strong{font-size:12px;display:block}
+.admin-mini small{font-size:10px;color:#9eabbc}
+.logout{
+    display:flex;gap:12px;align-items:center;padding:13px 14px;
+    color:#ffaaaa;border-radius:8px;font-size:13px;font-weight:600
+}
+.logout:hover{background:rgba(255,255,255,.08)}
+
+/* MAIN */
+.main{margin-left:260px;min-height:100vh}
+.topbar{
+    height:78px;background:#fff;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 34px;position:sticky;top:0;z-index:50
+}
+.top-left{display:flex;align-items:center;gap:15px}
+.menu-toggle{display:none;border:0;background:none;font-size:20px;color:var(--navy)}
+.breadcrumb{font-size:12px;color:var(--muted)}
+.breadcrumb strong{color:var(--text)}
+.top-right{display:flex;align-items:center;gap:18px}
+.top-icon{
+    width:38px;height:38px;border:1px solid var(--line);border-radius:10px;
+    display:grid;place-items:center;color:#637084;font-size:14px
+}
+.top-profile{display:flex;align-items:center;gap:10px}
+.top-profile .admin-avatar{width:35px;height:35px}
+.top-profile strong{font-size:12px;display:block}
+.top-profile small{font-size:10px;color:var(--muted)}
+.content{padding:32px 34px 45px;max-width:1600px;margin:auto}
+.page{display:none;animation:pageIn .35s ease}
+.page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.page-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}
+.page-heading h1{font:800 25px var(--heading);color:var(--navy)}
+.page-heading p{font-size:12px;color:var(--muted);margin-top:6px}
+.eyebrow{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:800;margin-bottom:8px}
+.primary-btn{
+    display:inline-flex;align-items:center;gap:9px;padding:12px 17px;
+    background:var(--navy);color:#fff;border-radius:7px;font-size:11px;font-weight:700;
+    transition:.25s
+}
+.primary-btn:hover{background:#2a4262;transform:translateY(-2px)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:21px}
+.card-title{font:700 14px var(--heading);color:var(--navy)}
+.card-subtitle{font-size:11px;color:var(--muted);margin-top:5px}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-bottom:22px}
+.stat-card{background:#fff;padding:21px;border:1px solid var(--line);border-radius:12px}
+.stat-top{display:flex;align-items:center;justify-content:space-between}
+.stat-icon{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:17px}
+.icon-blue{background:#eaf2ff;color:#477fc5}
+.icon-gold{background:#f8f1e5;color:#b48b4b}
+.icon-green{background:#e8f6ef;color:#239b72}
+.icon-red{background:#fff0f0;color:#df6262}
+.stat-card p{font-size:11px;color:var(--muted);margin-top:18px}
+.stat-card h2{font:800 25px var(--heading);color:var(--navy);margin-top:5px}
+.stat-foot{font-size:10px;color:var(--green);margin-top:8px}
+.dashboard-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;margin-bottom:20px}
+.chart-area{height:230px;display:flex;align-items:end;gap:15px;padding:25px 8px 0}
+.bar-group{height:100%;flex:1;display:flex;align-items:end;justify-content:center;gap:4px;position:relative}
+.bar{width:35%;border-radius:5px 5px 0 0;background:#dce7f4;min-height:8px}
+.bar.second{background:var(--gold)}
+.bar-label{position:absolute;bottom:-22px;font-size:10px;color:var(--muted)}
+.chart-legend{display:flex;gap:16px;margin-top:30px;font-size:10px;color:var(--muted)}
+.chart-legend span:before{content:"";display:inline-block;width:8px;height:8px;background:#dce7f4;border-radius:2px;margin-right:6px}
+.chart-legend span+span:before{background:var(--gold)}
+.activity-list{display:grid;margin-top:15px}
+.activity{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.activity:last-child{border:0}
+.activity-icon{width:34px;height:34px;border-radius:9px;background:#f1f4f8;display:grid;place-items:center;color:var(--blue);flex-shrink:0}
+.activity strong{font-size:11px;display:block}
+.activity small{font-size:10px;color:var(--muted);display:block;margin-top:5px}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:17px}
+table{width:100%;border-collapse:collapse;min-width:650px}
+th{text-align:left;font-size:10px;color:var(--muted);font-weight:700;padding:13px 12px;background:#f8f9fb}
+td{padding:14px 12px;border-bottom:1px solid var(--line);font-size:11px}
+td strong{font-size:11px;color:var(--navy)}
+.status{display:inline-block;padding:6px 9px;border-radius:30px;font-size:9px;font-weight:700}
+.status.active{background:#e8f6ef;color:#239b72}
+.status.pending{background:#fff5e5;color:#b98732}
+.status.review{background:#edf3ff;color:#477fc5}
+.status.closed{background:#fff0f0;color:#d45e5e}
+.table-action{color:var(--blue);font-weight:700;font-size:10px}
+
+/* IMAGE CARDS */
+.image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.image-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.image-card img{width:100%;height:175px;object-fit:cover;display:block;background:#e7ebf0}
+.image-card-body{padding:18px}
+.image-card-body h3{font:700 14px var(--heading);color:var(--navy)}
+.image-card-body p{font-size:11px;color:var(--muted);line-height:1.7;margin:9px 0 15px}
+.image-card-foot{display:flex;justify-content:space-between;align-items:center}
+.image-card-foot span{font-size:10px;color:var(--muted)}
+.text-btn{font-size:10px;color:var(--blue);font-weight:800}
+
+/* USERS / MESSAGES */
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:15px}
+.search-box{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);padding:11px 13px;border-radius:7px;color:var(--muted);font-size:11px}
+.search-box input{border:0;outline:0;font:inherit;width:180px;color:var(--text)}
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info-row{display:flex;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid var(--line);font-size:11px}
+.info-row span{color:var(--muted)}
+.info-row strong{color:var(--navy)}
+.settings-line{display:flex;justify-content:space-between;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.settings-line strong{font-size:12px}
+.settings-line p{font-size:10px;color:var(--muted);margin-top:5px}
+.settings-line a{font-size:10px;color:var(--blue);font-weight:700}
+
+/* MOBILE */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:90}
+@media(max-width:1100px){
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .image-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+    .sidebar{transform:translateX(-100%);transition:.3s}
+    .sidebar.open{transform:translateX(0)}
+    .overlay.show{display:block}
+    .main{margin-left:0}
+    .menu-toggle{display:block}
+    .topbar{padding:0 17px;height:68px}
+    .content{padding:25px 17px}
+    .top-profile div:last-child{display:none}
+    .dashboard-grid{grid-template-columns:1fr}
+    .page-heading{align-items:flex-start;flex-direction:column}
+    .image-grid{grid-template-columns:1fr}
+}
+@media(max-width:450px){
+    .stats-grid{grid-template-columns:1fr 1fr;gap:10px}
+    .stat-card{padding:14px}
+    .stat-card h2{font-size:21px}
+    .stat-icon{width:35px;height:35px}
+    .top-right{gap:8px}
+    .page-heading h1{font-size:22px}
+    .profile-grid{grid-template-columns:1fr}
+}
+
+.brand-logo {
+    width: 160px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+</style>
+</head>
+
+<body>
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <a href="admin.html" class="brand" aria-label="NEXORA Admin">
+    <img src="assets/logo.webp" alt="NEXORA Administration" class="brand-logo">
+</a>
+
+        <div class="sidebar-label">MAIN MENU</div>
+        <nav class="nav-list">
+            <a class="nav-item active" data-page="dashboard"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+            <a class="nav-item" data-page="business"><i class="fa-solid fa-building"></i> Business</a>
+            <a class="nav-item" data-page="services"><i class="fa-solid fa-briefcase"></i> Services</a>
+            <a class="nav-item" data-page="projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+            <a class="nav-item" data-page="meetings"><i class="fa-solid fa-calendar-check"></i> Meetings & Reports</a>
+
+        </nav>
+
+    
+
+        <div class="sidebar-bottom">
+            <div class="admin-mini">
+                <div class="admin-avatar">A</div>
+                <div><strong>Administrator</strong><small>Super Admin</small></div>
+            </div>
+            <a href="index.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <header class="topbar">
+            <div class="top-left">
+                <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="breadcrumb">NEXORA / <strong id="breadcrumb">Dashboard</strong></div>
+            </div>
+            <div class="top-right">
+                <a href="404.html" class="top-icon"><i class="fa-regular fa-bell"></i></a>
+                <div class="top-profile">
+                    <div class="admin-avatar">A</div>
+                    <div><strong>Administrator</strong><small>Super Admin</small></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <!-- DASHBOARD -->
+            <section class="page active" id="dashboard">
+                <div class="page-heading">
+                    <div><div class="eyebrow">CONTROL CENTER</div><h1>Admin Dashboard</h1><p>Monitor your business operations and platform performance.</p></div>
+                    <a href="404.html" class="primary-btn"><i class="fa-solid fa-download"></i> Export Report</a>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><div class="stat-top"><div class="stat-icon icon-blue"><i class="fa-solid fa-users"></i></div><i class="fa-solid fa-arrow-trend-up" style="color:var(--green)"></i></div><p>Total Users</p><h2>2,845</h2><div class="stat-foot">+12.8% this month</div></div>
+                    <div class="stat-card"><div class="stat-top"><div class="stat-icon icon-gold"><i class="fa-solid fa-building"></i></div><i class="fa-solid fa-arrow-trend-up" style="color:var(--green)"></i></div><p>Business Partners</p><h2>186</h2><div class="stat-foot">+8.4% this month</div></div>
+                    <div class="stat-card"><div class="stat-top"><div class="stat-icon icon-green"><i class="fa-solid fa-folder-open"></i></div><i class="fa-solid fa-arrow-trend-up" style="color:var(--green)"></i></div><p>Active Projects</p><h2>124</h2><div class="stat-foot">+5.2% this month</div></div>
+                    <div class="stat-card"><div class="stat-top"><div class="stat-icon icon-red"><i class="fa-solid fa-envelope"></i></div><i class="fa-solid fa-circle-exclamation" style="color:var(--red)"></i></div><p>Pending Requests</p><h2>38</h2><div class="stat-foot" style="color:var(--red)">Needs attention</div></div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">Platform Overview</div><div class="card-subtitle">Monthly activity comparison</div>
+                        <div class="chart-area">
+                            <div class="bar-group"><div class="bar" style="height:45%"></div><div class="bar second" style="height:65%"></div><span class="bar-label">Jan</span></div>
+                            <div class="bar-group"><div class="bar" style="height:60%"></div><div class="bar second" style="height:78%"></div><span class="bar-label">Feb</span></div>
+                            <div class="bar-group"><div class="bar" style="height:48%"></div><div class="bar second" style="height:70%"></div><span class="bar-label">Mar</span></div>
+                            <div class="bar-group"><div class="bar" style="height:72%"></div><div class="bar second" style="height:88%"></div><span class="bar-label">Apr</span></div>
+                            <div class="bar-group"><div class="bar" style="height:65%"></div><div class="bar second" style="height:82%"></div><span class="bar-label">May</span></div>
+                            <div class="bar-group"><div class="bar" style="height:80%"></div><div class="bar second" style="height:96%"></div><span class="bar-label">Jun</span></div>
+                        </div>
+                        <div class="chart-legend"><span>User activity</span><span>Business growth</span></div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">Recent Activity</div><div class="card-subtitle">Latest platform updates</div>
+                        <div class="activity-list">
+                            <div class="activity"><div class="activity-icon"><i class="fa-solid fa-user-plus"></i></div><div><strong>New user registered</strong><small>New account created · 10 min ago</small></div></div>
+                            <div class="activity"><div class="activity-icon"><i class="fa-solid fa-briefcase"></i></div><div><strong>Service request received</strong><small>Business consultation · 35 min ago</small></div></div>
+                            <div class="activity"><div class="activity-icon"><i class="fa-solid fa-folder"></i></div><div><strong>Project updated</strong><small>Digital transformation · 1 hour ago</small></div></div>
+                            <div class="activity"><div class="activity-icon"><i class="fa-solid fa-calendar"></i></div><div><strong>Meeting scheduled</strong><small>Strategy review · 2 hours ago</small></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Recent User Registrations</div><div class="card-subtitle">Latest accounts on the platform</div>
+                    <div class="table-wrap"><table>
+                        <thead><tr><th>USER</th><th>EMAIL</th><th>JOINED</th><th>ROLE</th><th>STATUS</th><th>ACTION</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Arun Kumar</strong></td><td>arun@example.com</td><td>12 Nov 2026</td><td>Business</td><td><span class="status active">Active</span></td><td><a href="404.html" class="table-action">View</a></td></tr>
+                            <tr><td><strong>Priya Sharma</strong></td><td>priya@example.com</td><td>11 Nov 2026</td><td>Client</td><td><span class="status active">Active</span></td><td><a href="404.html" class="table-action">View</a></td></tr>
+                            <tr><td><strong>Rahul Dev</strong></td><td>rahul@example.com</td><td>10 Nov 2026</td><td>Partner</td><td><span class="status pending">Pending</span></td><td><a href="404.html" class="table-action">View</a></td></tr>
+                        </tbody>
+                    </table></div>
+                </div>
+            </section>
+
+            <!-- USERS -->
+            <section class="page" id="users">
+                <div class="page-heading"><div><div class="eyebrow">USER MANAGEMENT</div><h1>Users</h1><p>Manage platform users, accounts and access requests.</p></div><a href="404.html" class="primary-btn"><i class="fa-solid fa-user-plus"></i> Add New User</a></div>
+                <div class="stats-grid">
+                    <div class="stat-card"><p>Total Accounts</p><h2>2,845</h2><div class="stat-foot">All registered users</div></div>
+                    <div class="stat-card"><p>Active Accounts</p><h2>2,610</h2><div class="stat-foot">Currently active</div></div>
+                    <div class="stat-card"><p>Pending Approval</p><h2>186</h2><div class="stat-foot" style="color:var(--gold)">Awaiting review</div></div>
+                    <div class="stat-card"><p>Restricted</p><h2>49</h2><div class="stat-foot" style="color:var(--red)">Access restricted</div></div>
+                </div>
+                <div class="card"><div class="toolbar"><div><div class="card-title">All Users</div><div class="card-subtitle">Account directory and user status</div></div><a href="404.html" class="primary-btn">Manage Users</a></div>
+                    <div class="table-wrap"><table><thead><tr><th>NAME</th><th>EMAIL</th><th>ROLE</th><th>JOINED</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody>
+                        <tr><td><strong>Arun Kumar</strong></td><td>arun@example.com</td><td>Business</td><td>12 Nov 2026</td><td><span class="status active">Active</span></td><td><a href="404.html" class="table-action">View details</a></td></tr>
+                        <tr><td><strong>Priya Sharma</strong></td><td>priya@example.com</td><td>Client</td><td>11 Nov 2026</td><td><span class="status active">Active</span></td><td><a href="404.html" class="table-action">View details</a></td></tr>
+                        <tr><td><strong>Rahul Dev</strong></td><td>rahul@example.com</td><td>Partner</td><td>10 Nov 2026</td><td><span class="status pending">Pending</span></td><td><a href="404.html" class="table-action">Review</a></td></tr>
+                        <tr><td><strong>Meera Raj</strong></td><td>meera@example.com</td><td>Client</td><td>09 Nov 2026</td><td><span class="status active">Active</span></td><td><a href="404.html" class="table-action">View details</a></td></tr>
+                    </tbody></table></div>
+                </div>
+            </section>
+
+            <!-- BUSINESS -->
+            <section class="page" id="business">
+                <div class="page-heading"><div><div class="eyebrow">ORGANIZATION DIRECTORY</div><h1>Business Management</h1><p>Manage business partners and organizational relationships.</p></div><a href="404.html" class="primary-btn"><i class="fa-solid fa-plus"></i> Add Business</a></div>
+                <div class="image-grid">
+                    <article class="image-card"><img src="assets/i6.webp" alt="Business management"><div class="image-card-body"><h3>Business Partnerships</h3><p>Manage strategic partnerships, company relationships and collaboration opportunities.</p><div class="image-card-foot"><span>86 Partnerships</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/s3.webp" alt="Business operations"><div class="image-card-body"><h3>Business Operations</h3><p>Monitor organizational activity, operational progress and business performance.</p><div class="image-card-foot"><span>54 Operations</span><a href="404.html" class="text-btn">Explore <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h16.webp" alt="Business growth"><div class="image-card-body"><h3>Growth & Expansion</h3><p>Review expansion opportunities, business development and growth initiatives.</p><div class="image-card-foot"><span>46 Initiatives</span><a href="404.html" class="text-btn">Explore <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                </div>
+                <div class="card" style="margin-top:20px"><div class="card-title">Business Directory</div><div class="card-subtitle">Registered organizations and partnership status</div><div class="table-wrap"><table><thead><tr><th>ORGANIZATION</th><th>CATEGORY</th><th>CONTACT</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody>
+                    <tr><td><strong>Vertex Technologies</strong></td><td>Technology</td><td>contact@vertex.com</td><td><span class="status active">Verified</span></td><td><a href="404.html" class="table-action">Details</a></td></tr>
+                    <tr><td><strong>Prime Solutions</strong></td><td>Consulting</td><td>hello@prime.com</td><td><span class="status pending">Review</span></td><td><a href="404.html" class="table-action">Review</a></td></tr>
+                    <tr><td><strong>Northstar Group</strong></td><td>Finance</td><td>info@northstar.com</td><td><span class="status active">Verified</span></td><td><a href="404.html" class="table-action">Details</a></td></tr>
+                </tbody></table></div></div>
+            </section>
+
+            <!-- SERVICES -->
+            <section class="page" id="services">
+                <div class="page-heading"><div><div class="eyebrow">SERVICE CONTROL</div><h1>Services Management</h1><p>Oversee services, requests and delivery operations.</p></div><a href="404.html" class="primary-btn"><i class="fa-solid fa-plus"></i> Add Service</a></div>
+                <div class="image-grid">
+                    <article class="image-card"><img src="assets/i9.webp" alt="Consulting services"><div class="image-card-body"><h3>Business Consulting</h3><p>Strategic guidance, business planning and organizational consulting services.</p><div class="image-card-foot"><span>32 Requests</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h14.webp" alt="Digital services"><div class="image-card-body"><h3>Digital Solutions</h3><p>Technology services, digital transformation and modern business solutions.</p><div class="image-card-foot"><span>48 Requests</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h6.webp" alt="Growth services"><div class="image-card-body"><h3>Growth Strategy</h3><p>Market research, business development and sustainable growth planning.</p><div class="image-card-foot"><span>26 Requests</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h13.webp" alt="Research services"><div class="image-card-body"><h3>Research & Analytics</h3><p>Market intelligence, data insights and performance analysis services.</p><div class="image-card-foot"><span>18 Requests</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/a4.webp" alt="Financial services"><div class="image-card-body"><h3>Financial Advisory</h3><p>Financial planning, operational reviews and strategic advisory services.</p><div class="image-card-foot"><span>21 Requests</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h3.webp" alt="Management services"><div class="image-card-body"><h3>Management Solutions</h3><p>Process improvement, team management and operational development.</p><div class="image-card-foot"><span>15 Requests</span><a href="404.html" class="text-btn">Manage <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="page" id="projects">
+                <div class="page-heading"><div><div class="eyebrow">PROJECT TRACKING</div><h1>Projects</h1><p>Track ongoing projects, milestones and delivery status.</p></div><a href="404.html" class="primary-btn"><i class="fa-solid fa-plus"></i> Create Project</a></div>
+                <div class="stats-grid">
+                    <div class="stat-card"><p>Total Projects</p><h2>124</h2><div class="stat-foot">Across all teams</div></div>
+                    <div class="stat-card"><p>In Progress</p><h2>68</h2><div class="stat-foot">Currently active</div></div>
+                    <div class="stat-card"><p>Completed</p><h2>42</h2><div class="stat-foot">Successfully delivered</div></div>
+                    <div class="stat-card"><p>On Hold</p><h2>14</h2><div class="stat-foot" style="color:var(--red)">Requires review</div></div>
+                </div>
+                <div class="image-grid">
+                    <article class="image-card"><img src="assets/h2.webp" alt="Strategy project"><div class="image-card-body"><h3>Corporate Strategy</h3><p>Business planning and long-term organizational development.</p><div class="image-card-foot"><span>Progress: 78%</span><a href="404.html" class="text-btn">View <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h14.webp" alt="Digital project"><div class="image-card-body"><h3>Digital Transformation</h3><p>Modernization of business systems and digital operations.</p><div class="image-card-foot"><span>Progress: 56%</span><a href="404.html" class="text-btn">View <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/h13.webp" alt="Growth project"><div class="image-card-body"><h3>Market Expansion</h3><p>New market opportunities and strategic growth planning.</p><div class="image-card-foot"><span>Progress: 35%</span><a href="404.html" class="text-btn">View <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                </div>
+            </section>
+
+            <!-- MEETINGS -->
+            <section class="page" id="meetings">
+                <div class="page-heading"><div><div class="eyebrow">SCHEDULE & DOCUMENTATION</div><h1>Meetings & Reports</h1><p>Manage meeting schedules, records and business reports.</p></div><a href="404.html" class="primary-btn"><i class="fa-solid fa-calendar-plus"></i> Schedule Meeting</a></div>
+                <div class="image-grid">
+                    <article class="image-card"><img src="assets/c2.webp" alt="Strategy meeting"><div class="image-card-body"><h3>Strategy Meetings</h3><p>Leadership discussions, business planning and strategic reviews.</p><div class="image-card-foot"><span>12 Meetings</span><a href="404.html" class="text-btn">View <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/c3.webp" alt="Project meeting"><div class="image-card-body"><h3>Project Reviews</h3><p>Project milestones, team updates and delivery discussions.</p><div class="image-card-foot"><span>18 Meetings</span><a href="404.html" class="text-btn">View <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="image-card"><img src="assets/a7.webp" alt="Business review"><div class="image-card-body"><h3>Business Reports</h3><p>Performance reports, operational summaries and analytics.</p><div class="image-card-foot"><span>24 Reports</span><a href="404.html" class="text-btn">View <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                </div>
+                <div class="card" style="margin-top:20px"><div class="card-title">Upcoming Meetings</div><div class="card-subtitle">Scheduled business meetings and reviews</div><div class="table-wrap"><table><thead><tr><th>MEETING</th><th>DATE</th><th>TIME</th><th>PARTICIPANTS</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody>
+                    <tr><td><strong>Quarterly Strategy Review</strong></td><td>14 Nov 2026</td><td>10:00 AM</td><td>8 Members</td><td><span class="status active">Confirmed</span></td><td><a href="404.html" class="table-action">Details</a></td></tr>
+                    <tr><td><strong>Digital Project Review</strong></td><td>16 Nov 2026</td><td>02:00 PM</td><td>6 Members</td><td><span class="status pending">Pending</span></td><td><a href="404.html" class="table-action">Details</a></td></tr>
+                    <tr><td><strong>Business Growth Meeting</strong></td><td>18 Nov 2026</td><td>11:30 AM</td><td>5 Members</td><td><span class="status review">Scheduled</span></td><td><a href="404.html" class="table-action">Details</a></td></tr>
+                </tbody></table></div></div>
+            </section>
+
+            <!-- MESSAGES -->
+            <section class="page" id="messages">
+                <div class="page-heading"><div><div class="eyebrow">COMMUNICATION CENTER</div><h1>Messages</h1><p>Review incoming inquiries and communication requests.</p></div><a href="404.html" class="primary-btn"><i class="fa-solid fa-envelope-open"></i> Manage Inbox</a></div>
+                <div class="stats-grid">
+                    <div class="stat-card"><p>Total Messages</p><h2>286</h2></div>
+                    <div class="stat-card"><p>Unread</p><h2>18</h2></div>
+                    <div class="stat-card"><p>Replied</p><h2>214</h2></div>
+                    <div class="stat-card"><p>Pending</p><h2>54</h2></div>
+                </div>
+                <div class="card"><div class="card-title">Recent Messages</div><div class="card-subtitle">Latest inquiries received from users</div><div class="table-wrap"><table><thead><tr><th>SENDER</th><th>SUBJECT</th><th>RECEIVED</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody>
+                    <tr><td><strong>Arun Kumar</strong></td><td>Business partnership inquiry</td><td>Today, 10:20 AM</td><td><span class="status pending">Unread</span></td><td><a href="404.html" class="table-action">Open</a></td></tr>
+                    <tr><td><strong>Priya Sharma</strong></td><td>Service information request</td><td>Today, 09:15 AM</td><td><span class="status review">In Review</span></td><td><a href="404.html" class="table-action">Open</a></td></tr>
+                    <tr><td><strong>Rahul Dev</strong></td><td>Project consultation</td><td>Yesterday</td><td><span class="status active">Replied</span></td><td><a href="404.html" class="table-action">Open</a></td></tr>
+                </tbody></table></div></div>
+            </section>
+
+            <!-- SETTINGS -->
+            <section class="page" id="settings">
+                <div class="page-heading"><div><div class="eyebrow">ADMIN PREFERENCES</div><h1>Settings</h1><p>Manage administrative preferences and platform configuration.</p></div></div>
+                <div class="profile-grid">
+                    <div class="card"><div class="card-title">Administrator Profile</div><div class="card-subtitle">Account information</div>
+                        <div class="info-row"><span>Name</span><strong>Administrator</strong></div>
+                        <div class="info-row"><span>Email</span><strong>admin@nexora.com</strong></div>
+                        <div class="info-row"><span>Account Role</span><strong>Super Admin</strong></div>
+                        <div class="info-row"><span>Account Status</span><strong style="color:var(--green)">Active</strong></div>
+                        <a href="404.html" class="primary-btn" style="margin-top:20px">Edit Profile <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card"><div class="card-title">Platform Configuration</div><div class="card-subtitle">Administrative controls</div>
+                        <div class="settings-line"><div><strong>Account Management</strong><p>Manage admin and user access</p></div><a href="404.html">Configure →</a></div>
+                        <div class="settings-line"><div><strong>Security Preferences</strong><p>Review platform security settings</p></div><a href="404.html">Configure →</a></div>
+                        <div class="settings-line"><div><strong>Notification Settings</strong><p>Manage system notifications</p></div><a href="404.html">Configure →</a></div>
+                        <div class="settings-line"><div><strong>System Preferences</strong><p>Platform configuration options</p></div><a href="404.html">Configure →</a></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<script>
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+const menuToggle = document.getElementById('menuToggle');
+const breadcrumb = document.getElementById('breadcrumb');
+
+const navItems = document.querySelectorAll('.nav-item[data-page]');
+const pages = document.querySelectorAll('.page');
+
+function openPage(pageName) {
+    const target = document.getElementById(pageName);
+    if (!target) return;
+
+    pages.forEach(page => page.classList.remove('active'));
+    navItems.forEach(item => item.classList.remove('active'));
+
+    target.classList.add('active');
+
+    const activeItem = document.querySelector(
+        '.nav-item[data-page="' + pageName + '"]'
+    );
+
+    if (activeItem) {
+        activeItem.classList.add('active');
+        breadcrumb.textContent = activeItem.textContent.trim();
+    }
+
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        openPage(item.dataset.page);
+    });
+});
+
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+    }
+});
+</script>
+</body>
+</html>
