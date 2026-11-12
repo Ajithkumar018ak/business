@@ -485,27 +485,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroSlides = [
 
         {
-            category: "STRATEGY & TRANSFORMATION",
+            category: "STRATEGY · TRANSFORMATION · GROWTH",
 
-            heading: "Build a vision.<br>Shape the <span>future.</span>",
+            heading: "Navigate<br><span>What's Next.</span>",
 
             description:
                 "We help ambitious organizations turn complex challenges into meaningful opportunities through strategic thinking and purposeful execution.",
 
-            image: "assets/images/hero.jpg",
+            image: "assets/h1.webp",
 
-            imageTitle: "Strategic Thinking",
+            imageTitle: "Think Beyond Today.",
 
-            stat: "01",
+            stat: "+32.8%",
 
-            number: "01",
+            number: "01 / 03",
 
-            rightLabel: "OUR PERSPECTIVE",
+            rightLabel: "STRATEGIC ADVISORY",
 
-            rightTitle: "Think beyond<br>the ordinary.",
+            rightTitle: "Clarity in<br>Every Decision.",
 
             rightDescription:
-                "A clearer vision creates stronger possibilities."
+                "Turn complex business challenges into clear, actionable strategies with expert guidance."
 
         },
 
@@ -517,13 +517,13 @@ document.addEventListener("DOMContentLoaded", () => {
             description:
                 "Discover new possibilities, strengthen your business foundations and create sustainable value with a team that thinks differently.",
 
-            image: "assets/images/hero-02.jpg",
+            image: "assets/h2.webp",
 
-            imageTitle: "Business Excellence",
+            imageTitle: "Executive Leadership",
 
-            stat: "02",
+            stat: "+45.2%",
 
-            number: "02",
+            number: "02 / 03",
 
             rightLabel: "OUR APPROACH",
 
@@ -542,13 +542,13 @@ document.addEventListener("DOMContentLoaded", () => {
             description:
                 "We combine insight, innovation and execution to help businesses navigate change and build a stronger tomorrow.",
 
-            image: "assets/images/hero-03.jpg",
+            image: "assets/h3.webp",
 
-            imageTitle: "Digital Innovation",
+            imageTitle: "Modern Architecture",
 
-            stat: "03",
+            stat: "+58.4%",
 
-            number: "03",
+            number: "03 / 03",
 
             rightLabel: "OUR COMMITMENT",
 
@@ -613,38 +613,46 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /* Update hero image */
+        /* Update hero image frames */
 
         if (heroImageStage) {
 
-            let heroImage = heroImageStage.querySelector("img");
+            const heroFrames = heroImageStage.querySelectorAll(".hero-image-frame");
 
-            if (!heroImage) {
+            if (heroFrames.length) {
 
-                heroImage = document.createElement("img");
+                heroFrames.forEach((frame, frameIndex) => {
 
-                heroImage.alt = slide.imageTitle;
+                    const isActive = frameIndex === activeSlide;
 
-                heroImageStage.prepend(heroImage);
+                    frame.classList.toggle("active", isActive);
+
+                    frame.setAttribute("aria-hidden", isActive ? "false" : "true");
+
+                    const img = frame.querySelector("img");
+
+                    if (img) {
+
+                        img.style.opacity = "";
+
+                        if (heroSlides[frameIndex] && heroSlides[frameIndex].image) {
+                            const expectedSrc = heroSlides[frameIndex].image;
+                            if (img.getAttribute("src") !== expectedSrc) {
+                                img.src = expectedSrc;
+                            }
+                        }
+
+                        if (isActive) {
+                            img.style.animation = "none";
+                            void img.offsetWidth;
+                            img.style.animation = "";
+                        }
+
+                    }
+
+                });
 
             }
-
-            heroImage.style.opacity = "0";
-
-            setTimeout(() => {
-
-                heroImage.src = slide.image;
-                heroImage.alt = slide.imageTitle;
-
-                heroImage.onload = () => {
-                    heroImage.style.opacity = "1";
-                };
-
-                heroImage.onerror = () => {
-                    heroImage.style.opacity = "1";
-                };
-
-            }, 200);
 
         }
 
